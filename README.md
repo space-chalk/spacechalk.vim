@@ -1,9 +1,16 @@
 ### Space Chalk Theme for Vim/Neovim
 A theme trying to combine a love of neon space colors and pastel chalk board colors.
 
+This theme also includes support for:
+
+- airline
+- gitgutter
+- NERDTree
+
 To enable this color scheme, set it in your `.vimrc`:
 
 ```vim
+" If installed with vim-plug, you will want this after your vim-plug block
 colorscheme spacechalk 
 ```
 
