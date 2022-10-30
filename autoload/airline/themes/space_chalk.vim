@@ -42,14 +42,14 @@ let s:cterm_insertfg  = 15   " Foreground for insert mode and file position bloc
 let s:gui_insertfg    = '#1d2652'
 
 let s:cterm_visualbg  = 166  " Background for visual mode and file position blocks
-let s:gui_visualbg    = '#fdcd36'
+let s:gui_visualbg    = '#5F87FF'
 let s:cterm_visualfg  = 15   " Foreground for visual mode and file position blocks
-let s:gui_visualfg    = '#1d2652'
+let s:gui_visualfg    = '#a8fd57'
 
 let s:cterm_replacebg = 88   " Background for replace mode and file position blocks
-let s:gui_replacebg   = '#f2748a'
+let s:gui_replacebg   = '#f289f9'
 let s:cterm_replacefg = 15   " Foreground for replace mode and file position blocks
-let s:gui_replacefg   = '#E8FBFF'
+let s:gui_replacefg   = '#323232'
 
 let s:cterm_alert     = 88   " Modified file alert color
 let s:gui_alert       = '#f2748a'
