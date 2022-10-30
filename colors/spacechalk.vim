@@ -1,5 +1,5 @@
 " Vim Color File for Space Chalk theme :3
-" Name:         space-chalk.vim
+" Name:         spacechalk.vim
 " Maintainer:   https://github.com/jessebot
 " Last Change:  2022-10-29 12:11:06.0 +0200
 " License:      GPLv3
@@ -26,17 +26,17 @@
 "        #585858 gray
 "        #323232 grayish black
 
+set background=dark
 hi clear
+
+let g:colors_name = "spacechalk"
 
 if exists("syntax_on")
    syntax reset
 endif
 
-let g:colors_name = "spacechalk"
-
 
 " ----------------------------- General Editor -------------------------------
-set background=dark
 
 " background of the whole editor and the plain text color
 highlight Normal      guibg=#232336 guifg=#CAEAFF
