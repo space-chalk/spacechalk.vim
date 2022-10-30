@@ -29,12 +29,11 @@
 set background=dark
 hi clear
 
-let g:colors_name = "spacechalk"
-
 if exists("syntax_on")
    syntax reset
 endif
 
+let g:colors_name = "spacechalk"
 
 " ----------------------------- General Editor -------------------------------
 
