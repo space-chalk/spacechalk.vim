@@ -34,7 +34,7 @@ let s:gui_termfg2     = '#E8FBFF'
 let s:cterm_normalbg  = 27   " Background for normal mode and file position blocks
 let s:gui_normalbg    = '#5F87FF'
 let s:cterm_normalfg  = 15   " Foreground for normal mode and file position blocks
-let s:gui_normalfg    = ''
+let s:gui_normalfg    = '#323232'
 
 let s:cterm_insertbg  = 70   " Background for insert mode and file position blocks
 let s:gui_insertbg    = '#a8fd57'
@@ -44,7 +44,7 @@ let s:gui_insertfg    = '#1d2652'
 let s:cterm_visualbg  = 166  " Background for visual mode and file position blocks
 let s:gui_visualbg    = '#fdcd36'
 let s:cterm_visualfg  = 15   " Foreground for visual mode and file position blocks
-let s:gui_visualfg    = '#E8FBFF'
+let s:gui_visualfg    = '#1d2652'
 
 let s:cterm_replacebg = 88   " Background for replace mode and file position blocks
 let s:gui_replacebg   = '#f2748a'
