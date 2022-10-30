@@ -1,16 +1,13 @@
-![](./logo.png)
-
-### [Space Chalk Theme](https://.github.io/) for Vim/Neovim
+### Space Chalk Theme for Vim/Neovim
+A theme trying to combine a love of neon space colors and pastel chalk board colors.
 
 To enable this color scheme, set it in your `.vimrc`:
 
 ```vim
-colorscheme space_chalk 
+colorscheme spacechalk 
 ```
 
-### Terminal True Color Support ###
-
-Add this to your `.vimrc` to enable true colors:
+This theme assumes gui colors. Add this to your `.vimrc` to enable true colors:
 
 ```vim
 if has('nvim') || has('termguicolors')
@@ -22,17 +19,12 @@ endif
 
 #### vim-plug ###
 ```
-Plug 'jessebot/space_chalk', { 'as': 'space_chalk' }
-```
-
-#### vundle ###
-```
-Plugin 'jessebot/space_chalk', {'name': 'space_chalk'}
+Plug 'jessebot/space_chalk', { 'as': 'spacechalk' }
 ```
 
 ### Screenshot ###
 
-![Screenshot](./images/screenshots/)
+![Screenshot](./img/vim_example.png)
 
 ### Troubleshooting ###
  If you are running vim inside tmux:
@@ -49,12 +41,19 @@ welcome. If you're new to vim colorschemes, here's some tips!
 
 Use :help command to check vim help on what variables are called, e.g.
 Open a python file in vim and then type the following:
-               :syntax list
+
+```vim
+:syntax list
+```
+
 That will give you all the syntax variable names and their colors as
-three x's, like: pythonInclude  xxx from import
+three `x`s, like: `pythonInclude  xxx from import`
 
 It may also be helpful to check out more about syntax/colors with:
-               :help syntax 
+
+```vim
+:help syntax 
+```
 
 Finally, useful tool for learning what highlight variables are called:
-http://bytefluent.com/vivify/ to find variables of colors
+[vivify](http://bytefluent.com/vivify/)
