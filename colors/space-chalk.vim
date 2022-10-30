@@ -1,4 +1,4 @@
-" Vim Color File
+" Vim Color File for Space Chalk theme :3
 " Name:         space-chalk.vim
 " Maintainer:   https://github.com/jessebot
 " Last Change:  2022-10-29 12:11:06.0 +0200
@@ -32,7 +32,7 @@ if exists("syntax_on")
    syntax reset
 endif
 
-let g:colors_name = "space-chalk"
+let g:colors_name = "spacechalk"
 
 
 " ----------------------------- General Editor -------------------------------
