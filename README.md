@@ -1,13 +1,31 @@
-### Space Chalk Theme for Vim/Neovim
+# Space Chalk Theme for Vim/Neovim
 A theme trying to combine a love of neon space colors and pastel chalk board colors.
 
-This theme also includes support for:
+![Screenshot](./img/vim_example.png)
 
+This theme also includes support for:
 - airline
 - gitgutter
 - NERDTree
 
-To enable this color scheme, set it in your `.vimrc`:
+## Installation
+
+### vim-plug
+
+```
+Plug 'jessebot/space_chalk', { 'as': 'spacechalk', 'do': ':colorscheme spacechalk' }
+```
+
+### manual
+
+## vim
+
+For the main scheme, you can just copy the [`colors/spacechalk.vim`](https://github.com/jessebot/space-chalk/blob/main/colors/spacechalk.vim) into your `~/.vim/colors` directory.
+
+For the airline theme, you can copy the [`autoload/airline/themes/space_chalk.vim`](https://github.com/jessebot/space-chalk/blob/main/autoload/airline/themes/space_chalk.vim) into your `~/.vim/autoload/airline/themes` directory.
+
+## Setup
+To enable this color scheme for vim, set it in your `.vimrc`:
 
 ```vim
 " If installed with vim-plug, you will want this after your vim-plug block
@@ -22,26 +40,23 @@ if has('nvim') || has('termguicolors')
 endif
 ```
 
-### Installation
+### Airline
+For airline, you'll need to add this to your `.vimrc`:
 
-#### vim-plug ###
+```vim
+" use custome space_chalk theme :)
+let g:airline_theme='space_chalk'
 ```
-Plug 'jessebot/space_chalk', { 'as': 'spacechalk' }
-```
 
-### Screenshot ###
-
-![Screenshot](./img/vim_example.png)
-
-### Troubleshooting ###
- If you are running vim inside tmux:
+### tmux
+If you are running vim inside tmux:
 
 ```tmux
 set-option -g default-terminal "xterm-256color"
 set-option -ga terminal-overrides ',xterm-256color:Tc'
 ```
 
-### Contributing ###
+## Contributing and Troubleshooting
 
 Contributions to get the syntax highlighting working everywhere are absolutely
 welcome. If you're new to vim colorschemes, here's some tips!

@@ -39,7 +39,7 @@ let s:gui_normalfg    = ''
 let s:cterm_insertbg  = 70   " Background for insert mode and file position blocks
 let s:gui_insertbg    = '#a8fd57'
 let s:cterm_insertfg  = 15   " Foreground for insert mode and file position blocks
-let s:gui_insertfg    = '#E8FBFF'
+let s:gui_insertfg    = '#1d2652'
 
 let s:cterm_visualbg  = 166  " Background for visual mode and file position blocks
 let s:gui_visualbg    = '#fdcd36'
