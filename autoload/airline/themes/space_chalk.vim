@@ -9,9 +9,9 @@ let g:airline#themes#space_chalk#palette = {}
 "        #f7fb53 bright yellow 
 "        #f6f76a soft yellow 
 "        #a8fd57 lime green
-"        #5ac4b9 teal (this color feels weird, maybe change it)
-"        #5cc9fd blue
+"        #c2ff87 lighter green
 "        #5f87ff cornflower blue
+"        #3cafff blue
 "        #a3a8f8 medium purple
 " 
 "        #232336 blueish black
@@ -21,42 +21,42 @@ let g:airline#themes#space_chalk#palette = {}
 "        #323232 grayish black
 
 " Color palette
-let s:cterm_termbg    = 237  " Background for branch and file format blocks
+let s:cterm_termbg    = 240  " Background for branch and file format blocks
 let s:gui_termbg      = '#585858'
-let s:cterm_termfg    = 144  " Foreground for branch and file format blocks
+let s:cterm_termfg    = 178  " Foreground for branch and file format blocks
 let s:gui_termfg      = '#fdcd36'
 
-let s:cterm_termbg2   = 234  " Background for middle block
+let s:cterm_termbg2   = 236  " Background for middle block
 let s:gui_termbg2     = '#323232'
-let s:cterm_termfg2   = 39   " Foreground for middle block
+let s:cterm_termfg2   = 15   " Foreground for middle block
 let s:gui_termfg2     = '#E8FBFF'
 
-let s:cterm_normalbg  = 27   " Background for normal mode and file position blocks
+let s:cterm_normalbg  = 69   " Background for normal mode and file position blocks
 let s:gui_normalbg    = '#5F87FF'
-let s:cterm_normalfg  = 15   " Foreground for normal mode and file position blocks
+let s:cterm_normalfg  = 236   " Foreground for normal mode and file position blocks
 let s:gui_normalfg    = '#323232'
 
-let s:cterm_insertbg  = 70   " Background for insert mode and file position blocks
+let s:cterm_insertbg  = 119   " Background for insert mode and file position blocks
 let s:gui_insertbg    = '#a8fd57'
-let s:cterm_insertfg  = 15   " Foreground for insert mode and file position blocks
+let s:cterm_insertfg  = 17   " Foreground for insert mode and file position blocks
 let s:gui_insertfg    = '#1d2652'
 
-let s:cterm_visualbg  = 166  " Background for visual mode and file position blocks
-let s:gui_visualbg    = '#5F87FF'
-let s:cterm_visualfg  = 15   " Foreground for visual mode and file position blocks
+let s:cterm_visualbg  = 32  " Background for visual mode and file position blocks
+let s:gui_visualbg    = '#2569aa'
+let s:cterm_visualfg  = 119   " Foreground for visual mode and file position blocks
 let s:gui_visualfg    = '#a8fd57'
 
-let s:cterm_replacebg = 88   " Background for replace mode and file position blocks
+let s:cterm_replacebg = 213   " Background for replace mode and file position blocks
 let s:gui_replacebg   = '#f289f9'
-let s:cterm_replacefg = 15   " Foreground for replace mode and file position blocks
+let s:cterm_replacefg = 236   " Foreground for replace mode and file position blocks
 let s:gui_replacefg   = '#323232'
 
-let s:cterm_alert     = 88   " Modified file alert color
+let s:cterm_alert     = 204   " Modified file alert color
 let s:gui_alert       = '#f2748a'
 
-let s:cterm_inactivebg = 234 " Background for inactive mode
+let s:cterm_inactivebg = 17 " Background for inactive mode
 let s:gui_inactivebg   = '#232336'
-let s:cterm_inactivefg = 239 " Foreground for inactive mode
+let s:cterm_inactivefg = 240 " Foreground for inactive mode
 let s:gui_inactivefg   = '#585858'
 
 " Branch and file format
@@ -100,3 +100,58 @@ let g:airline#themes#space_chalk#palette.ctrlp = airline#extensions#ctrlp#genera
       \ [s:gui_normalfg, s:gui_normalbg, s:cterm_normalfg, s:cterm_normalbg, ''],
       \ [s:gui_termfg, s:gui_termbg, s:cterm_termfg, s:cterm_termbg, ''],
       \ [s:gui_termfg2, s:gui_termbg2, s:cterm_termfg2, s:cterm_termbg2, 'bold'])
+
+
+" Warning/Error styling code from vim-airline's ["base16" theme](https://github.com/vim-airline/vim-airline-themes/blob/master/autoload/airline/themes/base16.vim)
+
+" Warnings
+let s:WI = [ '#585858', '#f7fb53', s:term_black, s:term_yellow ]
+let g:airline#themes#space_chalk#palette.normal.airline_warning =
+    \ [ s:WI[0], s:WI[1], s:WI[2], s:WI[3] ]
+
+let g:airline#themes#space_chalk#palette.normal_modified.airline_warning =
+    \ g:airline#themes#space_chalk#palette.normal.airline_warning
+
+let g:airline#themes#space_chalk#palette.insert.airline_warning =
+    \ g:airline#themes#space_chalk#palette.normal.airline_warning
+
+let g:airline#themes#space_chalk#palette.insert_modified.airline_warning =
+    \ g:airline#themes#space_chalk#palette.normal.airline_warning
+
+let g:airline#themes#space_chalk#palette.visual.airline_warning =
+    \ g:airline#themes#space_chalk#palette.normal.airline_warning
+
+let g:airline#themes#space_chalk#palette.visual_modified.airline_warning =
+    \ g:airline#themes#space_chalk#palette.normal.airline_warning
+
+let g:airline#themes#space_chalk#palette.replace.airline_warning =
+    \ g:airline#themes#space_chalk#palette.normal.airline_warning
+
+let g:airline#themes#space_chalk#palette.replace_modified.airline_warning =
+    \ g:airline#themes#space_chalk#palette.normal.airline_warning
+
+" Errors
+let s:ER = [ '#323232', '#f2748a', s:term_black, s:term_red ]
+let g:airline#themes#space_chalk#palette.normal.airline_error =
+    \ [ s:ER[0], s:ER[1], s:ER[2], s:ER[3] ]
+
+let g:airline#themes#space_chalk#palette.normal_modified.airline_error =
+    \ g:airline#themes#space_chalk#palette.normal.airline_error
+
+let g:airline#themes#space_chalk#palette.insert.airline_error =
+    \ g:airline#themes#space_chalk#palette.normal.airline_error
+
+let g:airline#themes#space_chalk#palette.insert_modified.airline_error =
+    \ g:airline#themes#space_chalk#palette.normal.airline_error
+
+let g:airline#themes#space_chalk#palette.visual.airline_error =
+    \ g:airline#themes#space_chalk#palette.normal.airline_error
+
+let g:airline#themes#space_chalk#palette.visual_modified.airline_error =
+    \ g:airline#themes#space_chalk#palette.normal.airline_error
+
+let g:airline#themes#space_chalk#palette.replace.airline_error =
+    \ g:airline#themes#space_chalk#palette.normal.airline_error
+
+let g:airline#themes#space_chalk#palette.replace_modified.airline_error =
+    \ g:airline#themes#space_chalk#palette.normal.airline_error
