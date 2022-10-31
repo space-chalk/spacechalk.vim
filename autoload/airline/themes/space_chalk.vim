@@ -67,26 +67,25 @@ let s:BB = [s:gui_termfg, s:gui_termbg, s:cterm_termfg, s:cterm_termbg]
 let s:N1 = [s:gui_normalfg, s:gui_normalbg, s:cterm_normalfg, s:cterm_normalbg] 
 " Middle block
 let s:N2 = [s:gui_termfg2, s:gui_termbg2, s:cterm_normalbg, s:cterm_termbg2]
+
 let g:airline#themes#space_chalk#palette.normal = airline#themes#generate_color_map(s:N1, s:BB, s:N2)
 let g:airline#themes#space_chalk#palette.normal_modified = {'airline_c': [s:gui_alert, s:gui_termbg2, s:cterm_alert, s:cterm_termbg2, 'bold'] ,}
-
-" Errors
-let s:ER = [ '#323232', '#f2748a', s:term_black, s:term_red ]
-" airline#themes#generate_color_map(s:I1, s:BB, s:I2)
-let g:airline#themes#space_chalk#palette.normal.airline_error =
-    \ [ s:ER[0], s:ER[1], s:ER[2], s:ER[3], '' ]
 
 " ----------------------------- Insert mode ----------------------------------
 " Outside blocks in insert mode
 let s:I1 = [s:gui_insertfg, s:gui_insertbg, s:cterm_insertfg, s:cterm_insertbg]
 " Middle block
 let s:I2 = [s:gui_insertbg, s:gui_termbg2, s:cterm_insertbg, s:cterm_termbg2]
+
 let g:airline#themes#space_chalk#palette.insert = airline#themes#generate_color_map(s:I1, s:BB, s:I2)
 let g:airline#themes#space_chalk#palette.insert_modified = {'airline_c': [s:gui_alert, s:gui_termbg2, s:cterm_alert, s:cterm_termbg2, 'bold'] ,}
 
 " ---------------------------- Replace mode ----------------------------------
-let s:R1 = [s:gui_replacefg, s:gui_replacebg, s:cterm_replacefg, s:cterm_replacebg]  " Outside blocks in replace mode
-let s:R2 = [s:gui_termfg, s:gui_termbg2, s:cterm_termfg, s:cterm_termbg2]            " Middle block
+" Outside blocks in replace mode
+let s:R1 = [s:gui_replacefg, s:gui_replacebg, s:cterm_replacefg, s:cterm_replacebg] 
+" Middle block
+let s:R2 = [s:gui_termfg, s:gui_termbg2, s:cterm_termfg, s:cterm_termbg2]
+
 let g:airline#themes#space_chalk#palette.replace = airline#themes#generate_color_map(s:R1, s:BB, s:R2)
 let g:airline#themes#space_chalk#palette.replace_modified = {'airline_c': [s:gui_alert, s:gui_termbg2, s:cterm_alert, s:cterm_termbg2, 'bold'] ,}
 
@@ -95,6 +94,7 @@ let g:airline#themes#space_chalk#palette.replace_modified = {'airline_c': [s:gui
 let s:V1 = [s:gui_visualfg, s:gui_visualbg, s:cterm_visualfg, s:cterm_visualbg]
 " Middle block
 let s:V2 = [s:gui_visualbg, s:gui_termbg2, s:cterm_visualbg, s:cterm_termbg2]   
+
 let g:airline#themes#space_chalk#palette.visual = airline#themes#generate_color_map(s:V1, s:BB, s:V2)
 let g:airline#themes#space_chalk#palette.visual_modified = {'airline_c': [s:gui_alert, s:gui_termbg2, s:cterm_alert, s:cterm_termbg2, 'bold'] ,}
 
@@ -102,71 +102,5 @@ let g:airline#themes#space_chalk#palette.visual_modified = {'airline_c': [s:gui_
 let s:IA1 = [s:gui_inactivefg, s:gui_inactivebg, s:cterm_inactivefg, s:cterm_inactivebg, '']
 let s:IA2 = [s:gui_inactivefg, s:gui_inactivebg, s:cterm_inactivefg, s:cterm_inactivebg, '']
 let s:IA3 = [s:gui_inactivefg, s:gui_inactivebg, s:cterm_inactivefg, s:cterm_inactivebg, '']
+
 let g:airline#themes#space_chalk#palette.inactive = airline#themes#generate_color_map(s:IA1, s:IA2, s:IA3)
-
-" I don't actually use this plugin yet, so it's untested
-" CtrlP plugin colors
-" if !get(g:, 'loaded_ctrlp', 0)
-"   finish
-" endif
-" let g:airline#themes#space_chalk#palette.ctrlp = airline#extensions#ctrlp#generate_color_map(
-"       \ [s:gui_normalfg, s:gui_normalbg, s:cterm_normalfg, s:cterm_normalbg, ''],
-"       \ [s:gui_termfg, s:gui_termbg, s:cterm_termfg, s:cterm_termbg, ''],
-"      \ [s:gui_termfg2, s:gui_termbg2, s:cterm_termfg2, s:cterm_termbg2, 'bold'])
-
-
-" Warning/Error styling code from:
-" https://github.com/vim-airline/vim-airline-themes/blob/master/autoload/airline/themes/base16.vim
-
-" Warnings
-let s:WI = [ '#585858', '#f7fb53', s:term_black, s:term_yellow ]
-let g:airline#themes#space_chalk#palette.normal.airline_warning =
-    \ [ s:WI[0], s:WI[1], s:WI[2], s:WI[3] ]
-
-let g:airline#themes#space_chalk#palette.normal_modified.airline_warning =
-    \ g:airline#themes#space_chalk#palette.normal.airline_warning
-
-let g:airline#themes#space_chalk#palette.insert.airline_warning =
-    \ g:airline#themes#space_chalk#palette.normal.airline_warning
-
-let g:airline#themes#space_chalk#palette.insert_modified.airline_warning =
-    \ g:airline#themes#space_chalk#palette.normal.airline_warning
-
-let g:airline#themes#space_chalk#palette.visual.airline_warning =
-    \ g:airline#themes#space_chalk#palette.normal.airline_warning
-
-let g:airline#themes#space_chalk#palette.visual_modified.airline_warning =
-    \ g:airline#themes#space_chalk#palette.normal.airline_warning
-
-let g:airline#themes#space_chalk#palette.replace.airline_warning =
-    \ g:airline#themes#space_chalk#palette.normal.airline_warning
-
-let g:airline#themes#space_chalk#palette.replace_modified.airline_warning =
-    \ g:airline#themes#space_chalk#palette.normal.airline_warning
-
-" Errors
-let s:ER = [ '#323232', '#f2748a', s:term_black, s:term_red ]
-" airline#themes#generate_color_map(s:I1, s:BB, s:I2)
-let g:airline#themes#space_chalk#palette.normal.airline_error =
-    \ [ s:ER[0], s:ER[1], s:ER[2], s:ER[3] ]
-
-let g:airline#themes#space_chalk#palette.normal_modified.airline_error =
-    \ g:airline#themes#space_chalk#palette.normal.airline_error
-
-let g:airline#themes#space_chalk#palette.insert.airline_error =
-    \ g:airline#themes#space_chalk#palette.normal.airline_error
-
-let g:airline#themes#space_chalk#palette.insert_modified.airline_error =
-    \ g:airline#themes#space_chalk#palette.normal.airline_error
-
-let g:airline#themes#space_chalk#palette.visual.airline_error =
-    \ g:airline#themes#space_chalk#palette.normal.airline_error
-
-let g:airline#themes#space_chalk#palette.visual_modified.airline_error =
-    \ g:airline#themes#space_chalk#palette.normal.airline_error
-
-let g:airline#themes#space_chalk#palette.replace.airline_error =
-    \ g:airline#themes#space_chalk#palette.normal.airline_error
-
-let g:airline#themes#space_chalk#palette.replace_modified.airline_error =
-    \ g:airline#themes#space_chalk#palette.normal.airline_error
