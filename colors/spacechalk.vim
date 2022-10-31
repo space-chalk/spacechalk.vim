@@ -154,3 +154,9 @@ let g:NERDTreeExtensionHighlightColor['cfg'] = 'fdcd36'
 
 let g:NERDTreeExtensionHighlightColor['py'] = '5cc9fd' " #5cc9fd blue
 let g:NERDTreeExtensionHighlightColor['sh'] = 'a8fd57' " #a8fd57 lime green
+
+" -------------------------- dashboard for nvim -----------------------------
+highlight DashboardHeader guifg=#fdcd36 ctermfg=3
+highlight DashboardCenter guifg=#a8fd57 ctermfg=3
+highlight DashboardShortcut guifg=#f289f9 ctermfg=3
+highlight DashboardFooter guifg=#5f87ff ctermfg=3
