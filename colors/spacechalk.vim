@@ -138,15 +138,15 @@ highlight NERDTreeGitStatusRenamed guifg=#fdcd36
 highlight NERDTreeGitStatusUntracked guifg=#f289f9
 highlight NERDTreeGitStatusDirty guifg=#fdcd36
 highlight NERDTreeGitStatusDeleted guifg=#f289f9
-highlight NERDTreeGitStatusIgnored guifg=#a3a8f8
+highlight NERDTreeGitStatusIgnored guifg=#fdcd36
 highlight NERDTreeGitStatusClean guifg=#a8fd57
+
+" ------------------------  NERDTree syntax colors ---------------------------
 highlight Directory guifg=#5cc9fd
 highlight NERDTreeCWD guifg=#f6f76a
 highlight NERDTreeDirSlash guifg=#a8fd57
 highlight NERDTreeClosable guifg=#fdcd36
 highlight NERDTreeOpenable guifg=#f289f9
-
-" ------------------------  NERDTree syntax colors ---------------------------
 
 let g:WebDevIconsDefaultFolderSymbolColor = '5f87ff' " #5f87ff cornflower blue
 let g:WebDevIconsDefaultFileSymbolColor = '5cc9fd' " #5cc9fd blue
