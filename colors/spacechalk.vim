@@ -131,16 +131,6 @@ highlight GitGutterAdd    guibg=#323232 guifg=#a8fd57 ctermfg=2
 highlight GitGutterChange guibg=#323232 guifg=#f7fb53 ctermfg=3
 highlight GitGutterDelete guibg=#323232 guifg=#f289f9 ctermfg=1
 
-" ------------- NERDTree Git Plugin: Xuyuanp/nerdtree-git-plugin -------------
-highlight NERDTreeGitStatusModified guifg=#fdcd36
-highlight NERDTreeGitStatusStaged guifg=#a8fd57
-highlight NERDTreeGitStatusRenamed guifg=#fdcd36
-highlight NERDTreeGitStatusUntracked guifg=#f289f9
-highlight NERDTreeGitStatusDirty guifg=#fdcd36
-highlight NERDTreeGitStatusDeleted guifg=#f289f9
-highlight NERDTreeGitStatusIgnored guifg=#fdcd36
-highlight NERDTreeGitStatusClean guifg=#a8fd57
-
 " ------------------------  NERDTree syntax colors ---------------------------
 highlight Directory guifg=#5cc9fd
 highlight NERDTreeCWD guifg=#f6f76a
@@ -169,6 +159,15 @@ let g:NERDTreeExtensionHighlightColor['cfg'] = 'fdcd36'
 let g:NERDTreeExtensionHighlightColor['py'] = '5cc9fd' " #5cc9fd blue
 let g:NERDTreeExtensionHighlightColor['sh'] = 'a8fd57' " #a8fd57 lime green
 
+" ------------- NERDTree Git Plugin: Xuyuanp/nerdtree-git-plugin -------------
+highlight NERDTreeGitStatusModified guifg=#fdcd36
+highlight NERDTreeGitStatusStaged guifg=#a8fd57
+highlight NERDTreeGitStatusRenamed guifg=#fdcd36
+highlight NERDTreeGitStatusUntracked guifg=#f289f9
+highlight NERDTreeGitStatusDirty guifg=#fdcd36
+highlight NERDTreeGitStatusDeleted guifg=#f289f9
+highlight NERDTreeGitStatusIgnored guifg=#fdcd36
+highlight NERDTreeGitStatusClean guifg=#a8fd57
 
 " -------------------------- dashboard for nvim ------------------------------
 highlight DashboardHeader guifg=#fdcd36 ctermfg=3
