@@ -12,14 +12,14 @@
 "        #f2748a pale dark red
 "        #ff8d87 soft redish orange
 "        #fdcd36 light orange
-"        #f7fb53 bright yellow 
-"        #f6f76a soft yellow 
+"        #f7fb53 bright yellow
+"        #f6f76a soft yellow
 "        #a8fd57 lime green
 "        #5ac4b9 teal (this color feels weird, maybe change it)
 "        #5cc9fd blue
 "        #5f87ff cornflower blue
 "        #a3a8f8 medium purple
-" 
+"
 "        #232336 blueish black
 "        #1d2652 navy blue
 "        #2569aa darker blue
@@ -27,7 +27,7 @@
 "        #323232 grayish black
 
 set background=dark
-hi clear
+highlight clear
 
 if exists("syntax_on")
    syntax reset
@@ -40,7 +40,7 @@ let g:colors_name = "spacechalk"
 " background of the whole editor and the plain text color
 highlight Normal      guibg=#232336 guifg=#CAEAFF
 highlight Cursor      guibg=#a3a8f8 guifg=Black
-highlight CursorLine  guibg=#323232 
+highlight CursorLine  term=bold guibg=#323232
 
 " line number line and numbers
 highlight LineNr      guibg=#323232 guifg=#5f87ff
@@ -126,11 +126,10 @@ highlight! link SignColumn LineNr
 " change the colors back to what they should be when there are changes
 highlight GitGutterAdd    guibg=#323232 guifg=#a8fd57 ctermfg=2
 highlight GitGutterChange guibg=#323232 guifg=#f7fb53 ctermfg=3
-highlight GitGutterDelete guibg=#323232 guifg=#f2748a ctermfg=1
-
+highlight GitGutterDelete guibg=#323232 guifg=#f289f9 ctermfg=1
 
 " ------------------------  NERDTree syntax colors ---------------------------
-highlight Directory guifg=#5cc9fd 
+highlight Directory guifg=#5cc9fd
 highlight NERDTreeCWD guifg=#f6f76a
 highlight NERDTreeDirSlash guifg=#a8fd57
 highlight NERDTreeClosable guifg=#fdcd36
@@ -139,21 +138,33 @@ highlight NERDTreeOpenable guifg=#f289f9
 let g:WebDevIconsDefaultFolderSymbolColor = '5f87ff' " #5f87ff cornflower blue
 let g:WebDevIconsDefaultFileSymbolColor = '5cc9fd' " #5cc9fd blue
 
-" set the default colors for different file types :)
+" ---- NERDTree icons by extentions - set the default colors for filetypes
 " all of these are pale purple: #a3a8f8
-let g:NERDTreeExtensionHighlightColor = {} 
-let g:NERDTreeExtensionHighlightColor['md'] = 'a3a8f8' 
-let g:NERDTreeExtensionHighlightColor['txt'] = 'a3a8f8' 
+let g:NERDTreeExtensionHighlightColor = {}
+let g:NERDTreeExtensionHighlightColor['md'] = 'a3a8f8'
+let g:NERDTreeExtensionHighlightColor['txt'] = 'a3a8f8'
+let g:NERDTreeExtensionHighlightColor['pdf'] = 'a3a8f8'
 
 " all of these are orange: #fdcd36
-let g:NERDTreeExtensionHighlightColor['in'] = 'fdcd36' 
-let g:NERDTreeExtensionHighlightColor['yml'] = 'fdcd36' 
-let g:NERDTreeExtensionHighlightColor['yaml'] = 'fdcd36' 
-let g:NERDTreeExtensionHighlightColor['json'] = 'fdcd36' 
-let g:NERDTreeExtensionHighlightColor['cfg'] = 'fdcd36' 
+let g:NERDTreeExtensionHighlightColor['ini'] = 'fdcd36'
+let g:NERDTreeExtensionHighlightColor['in'] = 'fdcd36'
+let g:NERDTreeExtensionHighlightColor['yml'] = 'fdcd36'
+let g:NERDTreeExtensionHighlightColor['yaml'] = 'fdcd36'
+let g:NERDTreeExtensionHighlightColor['json'] = 'fdcd36'
+let g:NERDTreeExtensionHighlightColor['cfg'] = 'fdcd36'
 
 let g:NERDTreeExtensionHighlightColor['py'] = '5cc9fd' " #5cc9fd blue
 let g:NERDTreeExtensionHighlightColor['sh'] = 'a8fd57' " #a8fd57 lime green
+
+" ---- this is for Xuyuanp/nerdtree-git-plugin ----------------
+highlight NERDTreeGitStatusModified guifg=#fdcd36
+highlight NERDTreeGitStatusStaged guifg=#a8fd57
+highlight NERDTreeGitStatusRenamed guifg=#fdcd36
+highlight NERDTreeGitStatusUntracked guifg=#f289f9
+highlight NERDTreeGitStatusDirty guifg=#fdcd36
+highlight NERDTreeGitStatusDeleted guifg=#f289f9
+highlight NERDTreeGitStatusIgnored guifg=#a3a8f8
+highlight NERDTreeGitStatusClean guifg=#a8fd57
 
 " -------------------------- dashboard for nvim -----------------------------
 highlight DashboardHeader guifg=#fdcd36 ctermfg=3
