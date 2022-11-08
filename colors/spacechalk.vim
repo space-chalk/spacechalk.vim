@@ -41,7 +41,7 @@ let g:colors_name = "spacechalk"
 highlight Normal      guibg=#232336 guifg=#CAEAFF
 highlight Cursor      guibg=#a3a8f8 guifg=Black
 highlight CursorLine  cterm=NONE term=bold guibg=#323232
-highlight CursorLineNr cterm=NONE guibg=#5f87ff guifg=#323232
+highlight CursorLineNr cterm=NONE term=bold guibg=#5f87ff guifg=#323232
 
 " line number line and numbers
 highlight LineNr      guibg=#323232 guifg=#5f87ff
@@ -69,6 +69,9 @@ highlight PMenuSel guibg=#323232 guifg=#fdcd36
 highlight clear Search
 highlight Search     guibg=#f7fb53 guifg=Black
 
+" errors and warnings
+highlight ErrorMsg guifg=#f2748a
+highlight WarningMsg guifg=#f289f9
 
 " -------------------- General Syntax Highlighting Colors --------------------
 highlight Comment    guifg=#a3a8f8
