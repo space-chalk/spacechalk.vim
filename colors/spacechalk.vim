@@ -91,6 +91,8 @@ highlight Todo       guifg=#fdcd36 guibg=#2569aa
 highlight NonText    guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 
+" --------------------------------- TOML -------------------------------------
+highlight tomlTable guifg=#5cc9fd
 
 " ------------------------------ Python Colors -------------------------------
 highlight pythonParameters      ctermfg=147 guifg=#AAAAFF
