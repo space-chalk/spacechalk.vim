@@ -6,7 +6,7 @@
 " Notes: 🎨 Colours for this theme
 "        --------------------------
 "        #E8FBFF bright white
-"        #CAEAFF chalky white
+"        #bdd8ff off blueish white
 "        #ffaff9 light pink
 "        #f289f9 neon magenta
 "        #f2748a pale dark red
@@ -14,8 +14,10 @@
 "        #fdcd36 light orange
 "        #f7fb53 bright yellow
 "        #f6f76a soft yellow
+"        #C1FF87 soft green
 "        #a8fd57 lime green
-"        #5ac4b9 teal (this color feels weird, maybe change it)
+"        #5ac4b9 dark cyan (this color feels weird, maybe change it)
+"        #6DF2E5 cyan
 "        #5cc9fd blue
 "        #5f87ff cornflower blue
 "        #a3a8f8 medium purple
@@ -24,36 +26,30 @@
 "        #1d2652 navy blue
 "        #2569aa darker blue
 "        #585858 gray
+"        #3E3E3E darker gray
 "        #323232 grayish black
 
-set background=dark
-highlight clear
+let g:colors_name = "spacechalk"
 
 if exists("syntax_on")
    syntax reset
 endif
 
-let g:colors_name = "spacechalk"
+set background=dark
+highlight clear
 
-" ----------------------------- General Editor -------------------------------
+" ----------------------------- "General Editor" -----------------------------
 
 " background of the whole editor and the plain text color
-highlight Normal      guibg=#232336 guifg=#CAEAFF
-highlight Cursor      guibg=#a3a8f8 guifg=Black
-highlight CursorLine  cterm=NONE term=bold guibg=#323232
-highlight CursorLineNr cterm=NONE term=bold guibg=#5f87ff guifg=#323232
+highlight Normal      guibg=#232336 guifg=#bdd8ff
 
-" line number line and numbers
+" line number line background and numbers
 highlight LineNr      guibg=#323232 guifg=#5f87ff
+highlight CursorLineNr cterm=NONE guibg=#5f87ff guifg=#323232
 
-" I typically use airline, so this isn't really applicable, open to changes
-highlight StatusLine guibg=#5f87ff guifg=#323232
-
-" for collapsed blocks/regions of code
-highlight Folded      guibg=#3E3E3E guifg=#ffaff9
-
-" visual mode highlighting of any kind
-highlight Visual      guibg=#2569aa guifg=#a8fd57
+" this is for your cursor line: the line you're currently on.
+highlight Cursor      guibg=#a3a8f8 guifg=Black
+highlight CursorLine  cterm=NONE guibg=#323232
 
 " controls the column over 80 characters
 highlight ColorColumn guibg=#323232
@@ -61,45 +57,92 @@ highlight ColorColumn guibg=#323232
 " for the split line between other windows, such as nerdtree
 highlight VertSplit guibg=#a8fd57 guifg=#3E3E3E
 
-" these are for little popup dropdown menus, for things like tab complete
+" I typically use airline, so this isn't really applicable, open to changes
+highlight StatusLine guibg=#5f87ff guifg=#323232
+
+
+" -------------------------- "Pmenu (Popup menu)" ----------------------------
+"
+" Popup menu: Normal item - e.g. popup dropdown menus for tab complete
 highlight Pmenu    guibg=#1d2652 guifg=#5cc9fd
+" Popup menu: Selected item.
 highlight PMenuSel guibg=#323232 guifg=#fdcd36
+" Popup menu: Scrollbar.
+highlight PmenuSbar guifg=#3E3E3E
+" Popup menu: Thumb of the scrollbar.
+highlight PmenuThumb guifg=#5f87ff
+
+" =========================== "Selection/Search" =============================
 
 " Searching
 highlight clear Search
 highlight Search     guibg=#f7fb53 guifg=Black
 
+" Visual mode [visual, v-line, v-block] highlighting of any kind
+highlight Visual      guibg=#2569aa guifg=#a8fd57
+
+" Folded code: collapsed blocks/regions of code
+highlight Folded      guibg=#3E3E3E guifg=#ffaff9
+
+
+" =========== "General Vim Defaults Syntax Highlighting Colors" ==============
+
 " errors and warnings
 highlight ErrorMsg guifg=#f2748a
 highlight WarningMsg guifg=#f289f9
 
-" -------------------- General Syntax Highlighting Colors --------------------
-highlight Comment    guifg=#a3a8f8
-highlight Constant   guifg=#f7fb53
-highlight Keyword    guifg=#fdcd36
+" ---------- "built in Vim Spell Checker" ------------
+" Word that is not recognized by the spellchecker.
+highlight SpellBad guibg=#ffaff9 guifg=#4a4a59
+highlight SpellCap guibg=#fdcd36 guifg=#4a4a59
+
+" ----------- "Vim Programming defaults" -------------
+highlight PreProc    guifg=#5cc9fd
+highlight Constant   guifg=#6DF2E5
+highlight Function   guifg=#5f87ff cterm=bold
+highlight Type       guifg=#fdcd36
+highlight Keyword    guifg=#f7fb53
+highlight Operator   guifg=#fdcd36
 highlight String     guifg=#a8fd57
-highlight Boolean    guifg=#5ac4b9
-highlight Number     guifg=#f289f9
-highlight Float      guifg=#f289f9
-highlight Type       guifg=#5cc9fd
+highlight Boolean    guifg=#C1FF87
+highlight Number     guifg=#a8fd57
+highlight Float      guifg=#a8fd57
+highlight Delimeter  guifg=#f289f9
 highlight Identifier guifg=#fdcd36
-highlight Function   guifg=#5cc9fd
-highlight PreProc    guifg=#5f87ff
+highlight Comment    guifg=#a3a8f8 cterm=italic
+" comment, with the word TODO highlighted
 highlight Todo       guifg=#fdcd36 guibg=#2569aa
 
 " Invisible character colors
 highlight NonText    guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 
-" --------------------------------- TOML -------------------------------------
-highlight tomlTable guifg=#5cc9fd
-
 " ------------------------------ Python Colors -------------------------------
-highlight pythonParameters      ctermfg=147 guifg=#AAAAFF
-highlight pythonParam           ctermfg=175 guifg=#f289f9
-highlight pythonBrackets        ctermfg=183 guifg=#ffaff9
-highlight pythonLambdaExpr      ctermfg=105 guifg=#8787ff
-highlight pythonBrackets        guifg=#5ac4b9
+highlight pythonDottedName      guifg=#5cc9fd
+highlight pythonDot             guifg=#6DF2E5
+
+highlight pythonBuiltinObject guifg=#f7fb53
+
+highlight pythonLambdaExpr      guifg=#8787ff
+
+" conditional operators like "==" or "!=" or "is" or "not"
+highlight pythonExtraOperator   guifg=#fdcd36
+
+" things like @option('--overwrite', '-O', is_flag=True)
+highlight pythonDecorator guifg=#f7fb53
+
+" python strings
+highlight pythonStrFormat cterm=bold guifg=#6DF2E5
+highlight pythonStrFormatting cterm=bold guifg=#6DF2E5
+
+
+highlight pythonBrackets        ctermfg=183 guifg=#5ac4b9
+highlight default link pythonKeywordOperator pythonExtraOperator
+highlight default link pythonDelimiter Delimeter
+highlight link pythonBoolean Boolean
+
+" --------------------------------- TOML -------------------------------------
+highlight default link tomlTable Function
 
 
 " ------------------------------ HTML Colors ---------------------------------
@@ -118,19 +161,21 @@ highlight link markdownCodeBlock markdownCode
 highlight link sassMixin Keyword
 highlight link sassMixing Constant
 
-" ------------------------------- Git colors ---------------------------------
+" ------------------------------- Git Commit ---------------------------------
 highlight gitcommitSelectedFile  guifg=#a8fd57
-highlight gitcommitDiscardedFile guifg=#f2748a
+highlight gitcommitDiscardedFile guifg=#f289f9
 highlight gitcommitWarning       guifg=#f2748a
-highlight gitcommitBranch        guifg=#fdcd36
+highlight gitcommitBranch        guifg=#f7fb53
 highlight gitcommitHeader        guifg=#5cc9fd
 
 " -------------------------------- Gitgutter ---------------------------------
 " change sign column color for git to be the same as line number background
 highlight! link SignColumn LineNr
-" change the colors back to what they should be when there are changes
+" if a line is added, the symbol in the gutter will be green
 highlight GitGutterAdd    guibg=#323232 guifg=#a8fd57 ctermfg=2
+" if a line is modified, the symbol in the gutter will be yellow
 highlight GitGutterChange guibg=#323232 guifg=#f7fb53 ctermfg=3
+" if a line is deleted, the symbol in the gutter will be pink
 highlight GitGutterDelete guibg=#323232 guifg=#f289f9 ctermfg=1
 
 " ------------------------  NERDTree syntax colors ---------------------------
@@ -178,6 +223,6 @@ highlight DashboardShortcut guifg=#f289f9 ctermfg=3
 highlight DashboardFooter guifg=#5f87ff ctermfg=3
 
 
-" ------------------- ale colors for errors and warnings ---------------------
+" ------------------- ALE colors for errors and warnings ---------------------
 highlight ALEErrorSign guifg=#ff8d87 guibg=#323232
 highlight ALEWarningSign guifg=#f289f9 guibg=#323232
