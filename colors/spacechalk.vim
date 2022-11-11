@@ -165,9 +165,11 @@ sign define semshiError text=E> texthl=semshiErrorSign
 
 " --------------------------------- TOML -------------------------------------
 highlight default link tomlTable Function
-highlight tomlArray guifg=#f289f9
-" highlight tomlKeyValueArray guifg=#f289f9
-
+highlight tomlDotInKey guifg=#5fafff
+highlight tomlBracket guifg=#f289f9
+highlight tomlCurly guifg=#5fafff
+highlight tomlComma guifg=#f289f9
+highlight tomlOperator guifg=#f7fb53
 
 " ------------------------------ HTML Colors ---------------------------------
 highlight link htmlTag     Type
