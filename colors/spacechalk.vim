@@ -88,8 +88,12 @@ highlight Folded      guibg=#3E3E3E guifg=#ffaff9
 " =========== "General Vim Defaults Syntax Highlighting Colors" ==============
 
 " errors and warnings
-highlight ErrorMsg guifg=#f2748a
+highlight ErrorMsg guifg=#f2748a guibg=#3E3E3E
+highlight Error guifg=#f2748a guibg=#3E3E3E
 highlight WarningMsg guifg=#f289f9
+
+" regular messages
+highlight MoreMsg guibg=#3E3E3E guifg=#a8fd57
 
 " ---------- "built in Vim Spell Checker" ------------
 " Word that is not recognized by the spellchecker.
@@ -161,8 +165,8 @@ sign define semshiError text=E> texthl=semshiErrorSign
 
 " --------------------------------- TOML -------------------------------------
 highlight default link tomlTable Function
-" highlight tomlArray guifg=#f289f9
-highlight tomlKeyValueArray guifg=#f289f9
+highlight tomlArray guifg=#f289f9
+" highlight tomlKeyValueArray guifg=#f289f9
 
 
 " ------------------------------ HTML Colors ---------------------------------
@@ -182,6 +186,9 @@ highlight link sassMixin Keyword
 highlight link sassMixing Constant
 
 " ------------------------------- Git Commit ---------------------------------
+"
+highlight DiffText guifg=#fdcd36
+
 highlight gitcommitSelectedFile  guifg=#a8fd57
 highlight gitcommitDiscardedFile guifg=#f289f9
 highlight gitcommitWarning       guifg=#f2748a
