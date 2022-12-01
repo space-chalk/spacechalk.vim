@@ -1,4 +1,4 @@
-let g:airline#themes#space_chalk#palette = {}
+let g:airline#themes#spacechalk#palette = {}
 "        #E8FBFF bright white
 "        #CAEAFF chalky white
 "        #ffaff9 light pink
@@ -74,8 +74,8 @@ let s:N1 = [s:gui_normalfg, s:gui_normalbg, s:cterm_normalfg, s:cterm_normalbg]
 " Middle block
 let s:N2 = [s:gui_termfg2, s:gui_termbg2, s:cterm_normalbg, s:cterm_termbg2]
 
-let g:airline#themes#space_chalk#palette.normal = airline#themes#generate_color_map(s:N1, s:BB, s:N2)
-let g:airline#themes#space_chalk#palette.normal_modified = {'airline_c': [s:gui_alert, s:gui_termbg2, s:cterm_alert, s:cterm_termbg2, 'bold'] ,}
+let g:airline#themes#spacechalk#palette.normal = airline#themes#generate_color_map(s:N1, s:BB, s:N2)
+let g:airline#themes#spacechalk#palette.normal_modified = {'airline_c': [s:gui_alert, s:gui_termbg2, s:cterm_alert, s:cterm_termbg2, 'bold'] ,}
 
 " ----------------------------- Insert mode ----------------------------------
 " Outside blocks in insert mode
@@ -83,8 +83,8 @@ let s:I1 = [s:gui_insertfg, s:gui_insertbg, s:cterm_insertfg, s:cterm_insertbg]
 " Middle block
 let s:I2 = [s:gui_insertbg, s:gui_termbg2, s:cterm_insertbg, s:cterm_termbg2]
 
-let g:airline#themes#space_chalk#palette.insert = airline#themes#generate_color_map(s:I1, s:BB, s:I2)
-let g:airline#themes#space_chalk#palette.insert_modified = {'airline_c': [s:gui_alert, s:gui_termbg2, s:cterm_alert, s:cterm_termbg2, 'bold'] ,}
+let g:airline#themes#spacechalk#palette.insert = airline#themes#generate_color_map(s:I1, s:BB, s:I2)
+let g:airline#themes#spacechalk#palette.insert_modified = {'airline_c': [s:gui_alert, s:gui_termbg2, s:cterm_alert, s:cterm_termbg2, 'bold'] ,}
 
 " ---------------------------- Replace mode ----------------------------------
 " Outside blocks in replace mode
@@ -92,8 +92,8 @@ let s:R1 = [s:gui_replacefg, s:gui_replacebg, s:cterm_replacefg, s:cterm_replace
 " Middle block
 let s:R2 = [s:gui_termfg, s:gui_termbg2, s:cterm_termfg, s:cterm_termbg2]
 
-let g:airline#themes#space_chalk#palette.replace = airline#themes#generate_color_map(s:R1, s:BB, s:R2)
-let g:airline#themes#space_chalk#palette.replace_modified = {'airline_c': [s:gui_alert, s:gui_termbg2, s:cterm_alert, s:cterm_termbg2, 'bold'] ,}
+let g:airline#themes#spacechalk#palette.replace = airline#themes#generate_color_map(s:R1, s:BB, s:R2)
+let g:airline#themes#spacechalk#palette.replace_modified = {'airline_c': [s:gui_alert, s:gui_termbg2, s:cterm_alert, s:cterm_termbg2, 'bold'] ,}
 
 " ---------------------------- Visual mode -----------------------------------
 " Outside blocks in visual mode
@@ -101,36 +101,36 @@ let s:V1 = [s:gui_visualfg, s:gui_visualbg, s:cterm_visualfg, s:cterm_visualbg]
 " Middle block
 let s:V2 = [s:gui_visualbg, s:gui_termbg2, s:cterm_visualbg, s:cterm_termbg2]
 
-let g:airline#themes#space_chalk#palette.visual = airline#themes#generate_color_map(s:V1, s:BB, s:V2)
-let g:airline#themes#space_chalk#palette.visual_modified = {'airline_c': [s:gui_alert, s:gui_termbg2, s:cterm_alert, s:cterm_termbg2, 'bold'] ,}
+let g:airline#themes#spacechalk#palette.visual = airline#themes#generate_color_map(s:V1, s:BB, s:V2)
+let g:airline#themes#spacechalk#palette.visual_modified = {'airline_c': [s:gui_alert, s:gui_termbg2, s:cterm_alert, s:cterm_termbg2, 'bold'] ,}
 
 " ---------------------------- Inactive mode ---------------------------------
 let s:IA1 = [s:gui_inactivefg, s:gui_inactivebg, s:cterm_inactivefg, s:cterm_inactivebg, '']
 let s:IA2 = [s:gui_inactivefg, s:gui_inactivebg, s:cterm_inactivefg, s:cterm_inactivebg, '']
 let s:IA3 = [s:gui_inactivefg, s:gui_inactivebg, s:cterm_inactivefg, s:cterm_inactivebg, '']
 
-let g:airline#themes#space_chalk#palette.inactive = airline#themes#generate_color_map(s:IA1, s:IA2, s:IA3)
+let g:airline#themes#spacechalk#palette.inactive = airline#themes#generate_color_map(s:IA1, s:IA2, s:IA3)
 
 " --------------------- Warnings and errors section --------------------------
-let g:airline#themes#space_chalk#palette.normal.airline_warning = s:WARNING
-let g:airline#themes#space_chalk#palette.normal_modified.airline_warning = s:WARNING
-let g:airline#themes#space_chalk#palette.insert.airline_warning = s:WARNING
-let g:airline#themes#space_chalk#palette.insert_modified.airline_warning = s:WARNING
-let g:airline#themes#space_chalk#palette.visual.airline_warning = s:WARNING
-let g:airline#themes#space_chalk#palette.visual_modified.airline_warning = s:WARNING
-let g:airline#themes#space_chalk#palette.replace.airline_warning = s:WARNING
-let g:airline#themes#space_chalk#palette.replace_modified.airline_warning = s:WARNING
-let g:airline#themes#space_chalk#palette.inactive.airline_warning = s:WARNING
+let g:airline#themes#spacechalk#palette.normal.airline_warning = s:WARNING
+let g:airline#themes#spacechalk#palette.normal_modified.airline_warning = s:WARNING
+let g:airline#themes#spacechalk#palette.insert.airline_warning = s:WARNING
+let g:airline#themes#spacechalk#palette.insert_modified.airline_warning = s:WARNING
+let g:airline#themes#spacechalk#palette.visual.airline_warning = s:WARNING
+let g:airline#themes#spacechalk#palette.visual_modified.airline_warning = s:WARNING
+let g:airline#themes#spacechalk#palette.replace.airline_warning = s:WARNING
+let g:airline#themes#spacechalk#palette.replace_modified.airline_warning = s:WARNING
+let g:airline#themes#spacechalk#palette.inactive.airline_warning = s:WARNING
 
-let g:airline#themes#space_chalk#palette.normal.airline_error = s:ERROR
-let g:airline#themes#space_chalk#palette.normal_modified.airline_error = s:ERROR
-let g:airline#themes#space_chalk#palette.insert.airline_error = s:ERROR
-let g:airline#themes#space_chalk#palette.insert_modified.airline_error = s:ERROR
-let g:airline#themes#space_chalk#palette.replace.airline_error = s:ERROR
-let g:airline#themes#space_chalk#palette.replace_modified.airline_error = s:ERROR
-let g:airline#themes#space_chalk#palette.visual.airline_error = s:ERROR
-let g:airline#themes#space_chalk#palette.visual_modified.airline_error = s:ERROR
-let g:airline#themes#space_chalk#palette.inactive.airline_error = s:ERROR
+let g:airline#themes#spacechalk#palette.normal.airline_error = s:ERROR
+let g:airline#themes#spacechalk#palette.normal_modified.airline_error = s:ERROR
+let g:airline#themes#spacechalk#palette.insert.airline_error = s:ERROR
+let g:airline#themes#spacechalk#palette.insert_modified.airline_error = s:ERROR
+let g:airline#themes#spacechalk#palette.replace.airline_error = s:ERROR
+let g:airline#themes#spacechalk#palette.replace_modified.airline_error = s:ERROR
+let g:airline#themes#spacechalk#palette.visual.airline_error = s:ERROR
+let g:airline#themes#spacechalk#palette.visual_modified.airline_error = s:ERROR
+let g:airline#themes#spacechalk#palette.inactive.airline_error = s:ERROR
 
 " These are not set above, and could cause weird colors in the future, but not
 " sure so just commenting them out for now.
