@@ -1,12 +1,12 @@
 # Space Chalk Theme for Vim/Neovim
 A theme trying to combine a love of neon space colors and pastel chalk board colors.
 
-![Screenshot](./img/vim_example.png)
+<img src="./img/vim_example.png" style="width=800" alt="Space Chalk Color Theme for vim/neovim, freaturing colors somewhere between pastel and neon on a very dark bluish purple">
 
 This theme also includes support for:
-- airline
-- gitgutter
-- NERDTree
+- [airline]
+- [gitgutter]
+- [NERDTree]
 
 ## Installation
 
@@ -29,7 +29,7 @@ To enable this color scheme for vim, set it in your `.vimrc`:
 
 ```vim
 " If installed with vim-plug, you will want this after your vim-plug block
-colorscheme spacechalk 
+colorscheme spacechalk
 ```
 
 This theme assumes gui colors. Add this to your `.vimrc` to enable true colors:
@@ -74,8 +74,12 @@ three `x`s, like: `pythonInclude  xxx from import`
 It may also be helpful to check out more about syntax/colors with:
 
 ```vim
-:help syntax 
+:help syntax
 ```
 
 Finally, useful tool for learning what highlight variables are called:
 [vivify](http://bytefluent.com/vivify/)
+
+[airline]: https://github.com/vim-airline/vim-airline
+[gitgutter]: https://github.com/airblade/vim-gitgutter
+[NERDTree]: https://github.com/preservim/nerdtree
