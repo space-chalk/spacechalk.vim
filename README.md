@@ -1,4 +1,4 @@
-# Space Chalk Theme for Vim/Neovim
+# Space Chalk Theme for Vim/NeoVim
 A theme trying to combine a love of neon space colors and pastel chalk board colors.
 
 <img src="./img/vim_example.png" style="width=800" alt="Space Chalk Color Theme for vim/neovim, freaturing colors somewhere between pastel and neon on a very dark bluish purple">
@@ -10,10 +10,12 @@ This theme also includes support for:
 
 ## Installation
 
+You should be able to install this fine with any vim/neovim plugin manager.
+
 ### vim-plug
 
 ```
-Plug 'jessebot/space_chalk', { 'as': 'spacechalk', 'do': ':colorscheme spacechalk' }
+Plug 'jessebot/spacechalk', { 'as': 'spacechalk', 'do': ':colorscheme spacechalk' }
 ```
 
 ### manual
@@ -22,7 +24,7 @@ Plug 'jessebot/space_chalk', { 'as': 'spacechalk', 'do': ':colorscheme spacechal
 
 For the main scheme, you can just copy the [`colors/spacechalk.vim`](https://github.com/jessebot/space-chalk/blob/main/colors/spacechalk.vim) into your `~/.vim/colors` directory.
 
-For the airline theme, you can copy the [`autoload/airline/themes/space_chalk.vim`](https://github.com/jessebot/space-chalk/blob/main/autoload/airline/themes/space_chalk.vim) into your `~/.vim/autoload/airline/themes` directory.
+For the airline theme, you can copy the [`autoload/airline/themes/spacechalk.vim`](https://github.com/jessebot/spacechalk/blob/main/autoload/airline/themes/spacechalk.vim) into your `~/.vim/autoload/airline/themes` directory.
 
 ## Setup
 To enable this color scheme for vim, set it in your `.vimrc`:
@@ -44,8 +46,8 @@ endif
 For airline, you'll need to add this to your `.vimrc`:
 
 ```vim
-" use custome space_chalk theme :)
-let g:airline_theme='space_chalk'
+" use custome space chalk theme :)
+let g:airline_theme='spacechalk'
 ```
 
 ### tmux
