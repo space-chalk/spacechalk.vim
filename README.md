@@ -86,8 +86,11 @@ Open a python file in vim and then type the following:
 :syntax list
 ```
 
-That will give you all the syntax variable names and their colors as
-three `x`s, like: `pythonInclude  xxx from import`
+That will give you all the syntax variable names and their colors as three `x`s, like:
+
+```vim
+pythonInclude  xxx from import
+```
 
 It may also be helpful to check out more about syntax/colors with:
 
