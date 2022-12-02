@@ -69,7 +69,17 @@ set-option -ga terminal-overrides ',xterm-256color:Tc'
 Contributions to get the syntax highlighting working everywhere are absolutely
 welcome. If you're new to vim colorschemes, here's some tips!
 
-Use :help command to check vim help on what variables are called, e.g.
+### Get the current highlighting for a given variable/filetype
+If you're already in a file in vim, and the highlighting doesn't look quite right,
+but you're not sure what the variable is called, you can run the following command:
+
+```vim
+:highlight
+```
+
+That will give the exact `highlight` commands for all the variables, but unfortunately in vim, it is not searchable, so you'll have to page through it ;(
+
+### Get the current syntax for a given variable/filetype
 Open a python file in vim and then type the following:
 
 ```vim
