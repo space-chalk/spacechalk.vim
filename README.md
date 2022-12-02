@@ -10,12 +10,18 @@ This theme also includes support for:
 
 ## Installation
 
-You should be able to install this fine with any vim/neovim plugin manager.
+You should be able to install this fine with any vim/neovim plugin manager. (If you can't, let me know via an Issue or PR)
 
 ### vim-plug
 
 ```
-Plug 'jessebot/spacechalk', { 'as': 'spacechalk', 'do': ':colorscheme spacechalk' }
+Plug 'jessebot/spacechalk'
+```
+
+### packer
+
+```
+Use 'jessebot/spacechalk'
 ```
 
 ### manual
