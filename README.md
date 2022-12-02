@@ -7,6 +7,7 @@ This theme also includes support for:
 - [airline]
 - [gitgutter]
 - [NERDTree]
+- ALE: currently working on supporting this :)
 
 ## Installation
 
