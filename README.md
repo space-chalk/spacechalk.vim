@@ -1,7 +1,7 @@
 # 🛸 Space Chalk Theme for Vim/NeoVim 🎨
 A theme trying to combine a love of neon space colors and pastel chalk board colors.
 
-<img src="./img/vim_example.png" style="width=800" alt="Space Chalk Color Theme for vim/neovim, freaturing colors somewhere between pastel and neon on a very dark bluish purple">
+<img src="./img/vim_example.png" style="width=800" alt="Screenshot of vim editing a python file with the nerdtree file browser plugin. It's showing off the Space Chalk Color Theme, featuring syntax highlight colors somewhere between pastel and neon on a very dark bluish purple background">
 
 This theme also includes support for:
 - [airline]
