@@ -7,7 +7,7 @@ This theme also includes support for:
 - [airline]
 - [gitgutter]
 - [NERDTree]
-- ALE: currently working on supporting this :)
+- [ALE] - currently working on supporting this :)
 
 ## Installation
 
@@ -103,5 +103,6 @@ Finally, useful tool for learning what highlight variables are called:
 [vivify](http://bytefluent.com/vivify/)
 
 [airline]: https://github.com/vim-airline/vim-airline
+[ALE]: https://github.com/dense-analysis/ale
 [gitgutter]: https://github.com/airblade/vim-gitgutter
 [NERDTree]: https://github.com/preservim/nerdtree
