@@ -1,4 +1,4 @@
-# 🛸 Space Chalk Theme for Vim/NeoVim 🎨
+# 🛸 Space Chalk Theme for [Neo]Vim 🎨
 A theme trying to combine a love of neon space colors and pastel chalk board colors.
 
 <img src="./img/vim_example.png" style="width=800" alt="Screenshot of vim editing a python file with the nerdtree file browser plugin. It's showing off the Space Chalk Color Theme, featuring syntax highlight colors somewhere between pastel and neon on a very dark bluish purple background">
@@ -16,13 +16,13 @@ You should be able to install this fine with any vim/neovim plugin manager. (If 
 ### vim-plug
 
 ```
-Plug 'jessebot/spacechalk'
+Plug 'space-chalk/spacechalk.vim'
 ```
 
 ### packer
 
 ```
-Use 'jessebot/spacechalk'
+Use 'space-chalk/spacechalk.vim'
 ```
 
 ### manual
