@@ -18,6 +18,7 @@ let g:airline#themes#spacechalk#palette = {}
 "        #1d2652 navy blue
 "        #2569aa darker blue
 "        #585858 gray
+"        #3E3E3E darker gray
 "        #323232 grayish black
 "
 
@@ -28,7 +29,7 @@ let s:cterm_termfg    = 178  " Foreground for branch and file format blocks
 let s:gui_termfg      = '#c2ff87'
 
 let s:cterm_termbg2   = 236  " Background for middle block
-let s:gui_termbg2     = '#323232'
+let s:gui_termbg2     = '#3E3E3E'
 let s:cterm_termfg2   = 15   " Foreground for middle block
 let s:gui_termfg2     = '#5f87ff'
 
@@ -131,10 +132,3 @@ let g:airline#themes#spacechalk#palette.replace_modified.airline_error = s:ERROR
 let g:airline#themes#spacechalk#palette.visual.airline_error = s:ERROR
 let g:airline#themes#spacechalk#palette.visual_modified.airline_error = s:ERROR
 let g:airline#themes#spacechalk#palette.inactive.airline_error = s:ERROR
-
-" These are not set above, and could cause weird colors in the future, but not
-" sure so just commenting them out for now.
-" highlight airline_error_bold term=bold gui=bold guifg=#323232 guibg=#f289f9
-" highlight airline_error_red guifg=#585858 guibg=#f289f9
-" highlight airline_error_inactive_bold gui=bold guifg=#000000 guibg=#990000
-" highlight airline_error_inactive_red guifg=#ff0000 guibg=#990000
