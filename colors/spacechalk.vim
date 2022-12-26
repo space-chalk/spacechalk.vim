@@ -20,6 +20,7 @@
 "        #6DF2E5 cyan
 "        #5cc9fd blue
 "        #5f87ff cornflower blue
+"        #d092fc
 "        #a3a8f8 medium purple
 "
 "        #232336 blueish black
@@ -105,10 +106,10 @@ highlight PreProc    guifg=#5cc9fd
 highlight Constant   guifg=#6DF2E5
 highlight Function   guifg=#5f87ff cterm=bold
 highlight Type       guifg=#fdcd36
-highlight Keyword    guifg=#f7fb53
+highlight Keyword    guifg=#5f87ff
 highlight Operator   guifg=#fdcd36
 highlight String     guifg=#a8fd57
-highlight Boolean    guifg=#C1FF87
+highlight Boolean    guifg=#f7fb53
 highlight Number     guifg=#a8fd57
 highlight Float      guifg=#a8fd57
 highlight Delimeter  guifg=#f289f9
