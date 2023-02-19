@@ -147,28 +147,6 @@ highlight default link pythonKeywordOperator pythonExtraOperator
 highlight default link pythonDelimiter Delimeter
 highlight link pythonBoolean Boolean
 
-" ----------- Semshi - Semantic Python Syntax highlight for neovim ---------
-if has('nvim')
-    function CustomSemshiHighlights()
-        hi semshiLocal           ctermfg=209 guifg=#f289f9
-        hi semshiGlobal          ctermfg=214 guifg=#5f87ff gui=bold
-        hi semshiImported        ctermfg=214 guifg=#fdcd36 cterm=bold gui=bold
-        hi semshiParameter       ctermfg=75  guifg=#5fafff
-        hi semshiParameterUnused ctermfg=117 guifg=#87d7ff cterm=underline gui=underline
-        hi semshiFree            ctermfg=218 guifg=#ffafd7
-        hi semshiBuiltin         ctermfg=207 guifg=#6DF2E5
-        hi semshiAttribute       ctermfg=49  guifg=#C1FF87
-        hi semshiSelf            ctermfg=249 guifg=#b2b2b2
-        hi semshiUnresolved      ctermfg=226 guifg=#f7fb53 cterm=underline gui=underline
-        hi semshiSelected        ctermfg=231 guifg=#323232 ctermbg=161 guibg=#f289f9 gui=bold
-
-        hi semshiErrorSign       ctermfg=231 guifg=#E8FBFF ctermbg=160 guibg=#f2748a
-        hi semshiErrorChar       ctermfg=231 guifg=#E8FBFF ctermbg=160 guibg=#f2748a
-    endfunction
-
-    autocmd FileType python call CustomSemshiHighlights()
-endif
-
 " --------------------------------- TOML -------------------------------------
 highlight default link tomlTable Function
 " highlight default link tomlTableArray Function
