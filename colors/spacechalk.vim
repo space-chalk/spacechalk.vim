@@ -102,6 +102,7 @@ highlight SpellBad guibg=#ffaff9 guifg=#4a4a59
 highlight SpellCap guibg=#fdcd36 guifg=#4a4a59
 
 " ----------- "Vim Programming defaults" -------------
+highlight Directory  guifg=#5cc9fd
 highlight PreProc    guifg=#5cc9fd
 highlight Constant   guifg=#6DF2E5
 highlight Function   guifg=#5f87ff cterm=bold
@@ -192,49 +193,50 @@ highlight GitGutterChange guibg=#323232 guifg=#f7fb53 ctermfg=3
 " if a line is deleted, the symbol in the gutter will be pink
 highlight GitGutterDelete guibg=#323232 guifg=#f289f9 ctermfg=1
 
-" ------------------------  NERDTree syntax colors ---------------------------
-highlight Directory guifg=#5cc9fd
-highlight NERDTreeCWD guifg=#f6f76a
-highlight NERDTreeDirSlash guifg=#a8fd57
-highlight NERDTreeClosable guifg=#fdcd36
-highlight NERDTreeOpenable guifg=#f289f9
+if !has('nvim')
+    " ------------------------  NERDTree syntax colors ---------------------------
+    highlight NERDTreeCWD guifg=#f6f76a
+    highlight NERDTreeDirSlash guifg=#a8fd57
+    highlight NERDTreeClosable guifg=#fdcd36
+    highlight NERDTreeOpenable guifg=#f289f9
 
-let g:WebDevIconsDefaultFolderSymbolColor = '5f87ff' " #5f87ff cornflower blue
-let g:WebDevIconsDefaultFileSymbolColor = '5cc9fd' " #5cc9fd blue
+    let g:WebDevIconsDefaultFolderSymbolColor = '5f87ff' " #5f87ff cornflower blue
+    let g:WebDevIconsDefaultFileSymbolColor = '5cc9fd' " #5cc9fd blue
 
-" ---- NERDTree icons by extentions - set the default colors for filetypes
-" all of these are pale purple: #a3a8f8
-let g:NERDTreeExtensionHighlightColor = {}
-let g:NERDTreeExtensionHighlightColor['md'] = 'a3a8f8'
-let g:NERDTreeExtensionHighlightColor['txt'] = 'a3a8f8'
-let g:NERDTreeExtensionHighlightColor['pdf'] = 'a3a8f8'
+    " ---- NERDTree icons by extentions - set the default colors for filetypes
+    " all of these are pale purple: #a3a8f8
+    let g:NERDTreeExtensionHighlightColor = {}
+    let g:NERDTreeExtensionHighlightColor['md'] = 'a3a8f8'
+    let g:NERDTreeExtensionHighlightColor['txt'] = 'a3a8f8'
+    let g:NERDTreeExtensionHighlightColor['pdf'] = 'a3a8f8'
 
-" all of these are orange: #fdcd36
-let g:NERDTreeExtensionHighlightColor['ini'] = 'fdcd36'
-let g:NERDTreeExtensionHighlightColor['in'] = 'fdcd36'
-let g:NERDTreeExtensionHighlightColor['yml'] = 'fdcd36'
-let g:NERDTreeExtensionHighlightColor['yaml'] = 'fdcd36'
-let g:NERDTreeExtensionHighlightColor['json'] = 'fdcd36'
-let g:NERDTreeExtensionHighlightColor['cfg'] = 'fdcd36'
+    " all of these are orange: #fdcd36
+    let g:NERDTreeExtensionHighlightColor['ini'] = 'fdcd36'
+    let g:NERDTreeExtensionHighlightColor['in'] = 'fdcd36'
+    let g:NERDTreeExtensionHighlightColor['yml'] = 'fdcd36'
+    let g:NERDTreeExtensionHighlightColor['yaml'] = 'fdcd36'
+    let g:NERDTreeExtensionHighlightColor['json'] = 'fdcd36'
+    let g:NERDTreeExtensionHighlightColor['cfg'] = 'fdcd36'
 
-let g:NERDTreeExtensionHighlightColor['py'] = '5cc9fd' " #5cc9fd blue
-let g:NERDTreeExtensionHighlightColor['sh'] = 'a8fd57' " #a8fd57 lime green
+    let g:NERDTreeExtensionHighlightColor['py'] = '5cc9fd' " #5cc9fd blue
+    let g:NERDTreeExtensionHighlightColor['sh'] = 'a8fd57' " #a8fd57 lime green
 
-" ------------- NERDTree Git Plugin: Xuyuanp/nerdtree-git-plugin -------------
-highlight NERDTreeGitStatusModified guifg=#fdcd36
-highlight NERDTreeGitStatusStaged guifg=#a8fd57
-highlight NERDTreeGitStatusRenamed guifg=#fdcd36
-highlight NERDTreeGitStatusUntracked guifg=#f289f9
-highlight NERDTreeGitStatusDirty guifg=#fdcd36
-highlight NERDTreeGitStatusDeleted guifg=#f289f9
-highlight NERDTreeGitStatusIgnored guifg=#fdcd36
-highlight NERDTreeGitStatusClean guifg=#a8fd57
+    " ------------- NERDTree Git Plugin: Xuyuanp/nerdtree-git-plugin -------------
+    highlight NERDTreeGitStatusModified guifg=#fdcd36
+    highlight NERDTreeGitStatusStaged guifg=#a8fd57
+    highlight NERDTreeGitStatusRenamed guifg=#fdcd36
+    highlight NERDTreeGitStatusUntracked guifg=#f289f9
+    highlight NERDTreeGitStatusDirty guifg=#fdcd36
+    highlight NERDTreeGitStatusDeleted guifg=#f289f9
+    highlight NERDTreeGitStatusIgnored guifg=#fdcd36
+    highlight NERDTreeGitStatusClean guifg=#a8fd57
+endif
 
-" -------------------------- dashboard for nvim ------------------------------
-highlight DashboardHeader guifg=#fdcd36 ctermfg=3
-highlight DashboardCenter guifg=#a8fd57 ctermfg=3
-highlight DashboardShortcut guifg=#f289f9 ctermfg=3
-highlight DashboardFooter guifg=#5f87ff ctermfg=3
+if has('nvim')
+    " -------------------------- dashboard for nvim ------------------------------
+    highlight DashboardHeader guifg=#fdcd36 ctermfg=3
+    highlight DashboardFooter guifg=#5f87ff ctermfg=3
+endif
 
 
 " ------------------- ALE colors for errors and warnings ---------------------
