@@ -235,7 +235,7 @@ endif
 if has('nvim')
     " -------------------------- dashboard for nvim ------------------------------
     highlight DashboardHeader guifg=#fdcd36 ctermfg=3
-    highlight DashboardFooter guifg=#5f87ff ctermfg=3
+    highlight DashboardFooter guifg=#585858 ctermfg=3
 endif
 
 
