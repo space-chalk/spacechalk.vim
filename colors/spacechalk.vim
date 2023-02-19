@@ -108,7 +108,7 @@ highlight Constant   guifg=#6DF2E5
 highlight Function   guifg=#5f87ff cterm=bold
 highlight Type       guifg=#fdcd36
 highlight Keyword    guifg=#f7fb53
-highlight Operator   guifg=#fdcd36
+highlight Operator   guifg=#f289f9
 highlight String     guifg=#a8fd57
 highlight Boolean    guifg=#f7fb53
 highlight Number     guifg=#a8fd57
