@@ -103,10 +103,11 @@ highlight SpellCap guibg=#fdcd36 guifg=#4a4a59
 
 " ----------- "Vim Programming defaults" -------------
 highlight Directory  guifg=#5cc9fd
+highlight Property   guifg=#5cc9fd
 highlight PreProc    guifg=#5cc9fd
 highlight Constant   guifg=#6DF2E5
 highlight Function   guifg=#5f87ff cterm=bold
-highlight Type       guifg=#fdcd36
+highlight Type       guifg=#5cc9fd
 highlight Keyword    guifg=#f7fb53
 highlight Operator   guifg=#f289f9
 highlight String     guifg=#a8fd57
