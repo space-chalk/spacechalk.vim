@@ -102,23 +102,23 @@ highlight SpellBad guibg=#ffaff9 guifg=#4a4a59
 highlight SpellCap guibg=#fdcd36 guifg=#4a4a59
 
 " ----------- "Vim Programming defaults" -------------
-highlight Directory  guifg=#5cc9fd
-highlight Property   guifg=#5cc9fd
-highlight PreProc    guifg=#5cc9fd
-highlight Constant   guifg=#6DF2E5
-highlight Function   guifg=#5f87ff cterm=bold
-highlight Type       guifg=#5cc9fd
-highlight Variable   guifg=#5cc9fd
+highlight Constant            guifg=#6DF2E5
+highlight Directory           guifg=#5cc9fd
+highlight Property            guifg=#5cc9fd
+highlight PreProc             guifg=#5cc9fd
+highlight Type                guifg=#5cc9fd
+highlight Identifier          guifg=#5cc9fd
+highlight Function            guifg=#f7fb53 cterm=underline
+highlight Include             guifg=#5f87ff
+highlight Keyword             guifg=#5f87ff
 highlight punctuation.bracket guifg=#5cc9fd
-highlight Keyword    guifg=#f7fb53
-highlight Operator   guifg=#f289f9
-highlight String     guifg=#a8fd57
-highlight Boolean    guifg=#f7fb53
-highlight Number     guifg=#a8fd57
-highlight Float      guifg=#a8fd57
-highlight Delimeter  guifg=#f289f9
-highlight Identifier guifg=#fdcd36
-highlight Comment    guifg=#a3a8f8 cterm=italic gui=italic
+highlight Operator            guifg=#f289f9
+highlight String              guifg=#a8fd57
+highlight Boolean             guifg=#f7fb53
+highlight Number              guifg=#a8fd57
+highlight Float               guifg=#a8fd57
+highlight Delimeter           guifg=#f289f9
+highlight Comment             guifg=#a3a8f8 cterm=italic gui=italic
 
 " comment, with the word TODO highlighted
 highlight Todo       guifg=#fdcd36 guibg=#2569aa
