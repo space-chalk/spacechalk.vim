@@ -108,6 +108,8 @@ highlight PreProc    guifg=#5cc9fd
 highlight Constant   guifg=#6DF2E5
 highlight Function   guifg=#5f87ff cterm=bold
 highlight Type       guifg=#5cc9fd
+highlight Variable   guifg=#5cc9fd
+highlight punctuation.bracket guifg=#5cc9fd
 highlight Keyword    guifg=#f7fb53
 highlight Operator   guifg=#f289f9
 highlight String     guifg=#a8fd57
