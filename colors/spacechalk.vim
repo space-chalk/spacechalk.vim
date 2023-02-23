@@ -48,7 +48,7 @@ highlight Normal      guibg=#232336 guifg=#bdd8ff
 highlight LineNr      guibg=#323232 guifg=#5f87ff
 highlight CursorLineNr cterm=NONE guibg=#5f87ff guifg=#323232
 
-" this is for your cursor line: the line you're currently on.
+" for your cursor line: the line you're currently on
 highlight Cursor      guibg=#a3a8f8 guifg=Black
 highlight CursorLine  cterm=NONE guibg=#323232
 
@@ -102,23 +102,23 @@ highlight SpellBad guibg=#ffaff9 guifg=#4a4a59
 highlight SpellCap guibg=#fdcd36 guifg=#4a4a59
 
 " ----------- "Vim Programming defaults" -------------
-highlight Constant            guifg=#6DF2E5
-highlight Directory           guifg=#5cc9fd
-highlight Property            guifg=#5cc9fd
-highlight PreProc             guifg=#5cc9fd
-highlight Type                guifg=#5cc9fd
-highlight Identifier          guifg=#5cc9fd
-highlight Function            guifg=#f7fb53 cterm=underline
-highlight Include             guifg=#5f87ff
-highlight Keyword             guifg=#5f87ff
-highlight punctuation.bracket guifg=#5cc9fd
-highlight Operator            guifg=#f289f9
-highlight String              guifg=#a8fd57
-highlight Boolean             guifg=#f7fb53
-highlight Number              guifg=#a8fd57
-highlight Float               guifg=#a8fd57
-highlight Delimeter           guifg=#f289f9
-highlight Comment             guifg=#a3a8f8 cterm=italic gui=italic
+highlight Constant             guifg=#6DF2E5
+highlight Directory            guifg=#5cc9fd
+highlight Property             guifg=#5cc9fd
+highlight PreProc              guifg=#5cc9fd
+highlight Type                 guifg=#5cc9fd
+highlight Identifier           guifg=#5cc9fd
+highlight Function             guifg=#f7fb53 cterm=underline
+highlight Include              guifg=#5f87ff
+highlight Keyword              guifg=#5f87ff
+highlight @punctuation.bracket guifg=#f289f9
+highlight Operator             guifg=#fdcd36
+highlight String               guifg=#a8fd57
+highlight Boolean              guifg=#f7fb53
+highlight Number               guifg=#a8fd57
+highlight Float                guifg=#a8fd57
+highlight Delimeter            guifg=#f289f9
+highlight Comment              guifg=#a3a8f8 cterm=italic gui=italic
 
 " comment, with the word TODO highlighted
 highlight Todo       guifg=#fdcd36 guibg=#2569aa
@@ -128,28 +128,30 @@ highlight NonText    guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 
 " ------------------------------ Python Colors -------------------------------
-highlight pythonDottedName      guifg=#5cc9fd
-highlight pythonDot             guifg=#6DF2E5
+if !has('nvim')
+	highlight pythonDottedName      guifg=#5cc9fd
+	highlight pythonDot             guifg=#6DF2E5
 
-highlight pythonBuiltinObject guifg=#ffaff9
+	highlight pythonBuiltinObject guifg=#ffaff9
 
-highlight pythonLambdaExpr      guifg=#8787ff
+	highlight pythonLambdaExpr      guifg=#8787ff
 
-" conditional operators like "==" or "!=" or "is" or "not"
-highlight pythonExtraOperator   guifg=#fdcd36
+	" conditional operators like "==" or "!=" or "is" or "not"
+	highlight pythonExtraOperator   guifg=#fdcd36
 
-" things like @option('--overwrite', '-O', is_flag=True)
-highlight pythonDecorator guifg=#f7fb53
+	" things like @option('--overwrite', '-O', is_flag=True)
+	highlight pythonDecorator guifg=#f7fb53
 
-" python strings
-highlight pythonStrFormat cterm=bold guifg=#6DF2E5
-highlight pythonStrFormatting cterm=bold guifg=#6DF2E5
+	" python strings
+	highlight pythonStrFormat cterm=bold guifg=#6DF2E5
+	highlight pythonStrFormatting cterm=bold guifg=#6DF2E5
 
 
-highlight pythonBrackets        ctermfg=183 guifg=#5ac4b9
-highlight default link pythonKeywordOperator pythonExtraOperator
-highlight default link pythonDelimiter Delimeter
-highlight link pythonBoolean Boolean
+	highlight pythonBrackets        ctermfg=183 guifg=#5ac4b9
+	highlight default link pythonKeywordOperator pythonExtraOperator
+	highlight default link pythonDelimiter Delimeter
+	highlight link pythonBoolean Boolean
+endif
 
 " --------------------------------- TOML -------------------------------------
 highlight default link tomlTable Function
