@@ -7,7 +7,7 @@ This theme also includes support for:
 - [airline]
 - [gitgutter]
 - [ALE] - currently working on supporting this :)
-- [scrollbar.nvim] - currently working on supporting this :)
+- [scrollbar.nvim](https://github.com/petertriho/nvim-scrollbar)
 
 In vim only:
 - [NERDTree]
