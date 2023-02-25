@@ -247,29 +247,6 @@ if has('nvim')
 
 
     " -------------------------- scrollbar.nvim ------------------------------
-	"        #E8FBFF bright white
-	"        #bdd8ff off blueish white
-	"        #ffaff9 light pink
-	"        #f289f9 neon magenta
-	"        #f2748a pale dark red
-	"        #ff8d87 soft redish orange
-	"        #fdcd36 light orange
-	"        #f7fb53 bright yellow
-	"        #f6f76a soft yellow
-	"        #C1FF87 soft green
-	"        #a8fd57 lime green
-	"        #5ac4b9 dark cyan (this color feels weird, maybe change it)
-	"        #6DF2E5 cyan
-	"        #5cc9fd blue
-	"        #5f87ff cornflower blue
-	"        #d092fc
-	"        #a3a8f8 medium purple
-	"        #232336 blueish black
-	"        #1d2652 navy blue
-	"        #2569aa darker blue
-	"        #585858 gray
-	"        #3E3E3E darker gray
-	"        #323232 grayish black
     highlight ScrollbarHandle          guibg=#3E3E3E
     highlight ScrollbarCursorHandle    guifg=#C1FF87 guibg=#5f87ff
 
@@ -277,27 +254,11 @@ if has('nvim')
     highlight ScrollbarSearch          guifg=#5cc9fd
 
     " this works on ALE provided error and warnings
-    highlight link ScrollbarError Error
-    highlight ScrollbarErrorHandle     guifg=#f2748a guibg=#f2748a
+    highlight ScrollbarErrorHandle     guifg=#f2748a guibg=#585858
+    highlight link ScrollbarError ScrollbarErrorHandle
+
+    highlight ScrollbarWarnHandle      guifg=#f289f9 guibg=#585858
     highlight link ScrollbarWarn WarningMsg
+
     highlight ScrollbarInfo guifg=#5cc9fd
-    " highlight ScrollbarWarnHandle      guifg=
-    " highlight ScrollbarInfoHandle      guifg=
-
-    " don't know how this is used
-    " highlight ScrollbarHint            guifg=
-    " highlight ScrollbarHintHandle      guifg=
-
-    " unsure what this does
-    " highlight ScrollbarMisc            guifg=
-    " highlight ScrollbarMiscHandle      guifg=
-
-    " Git info in your scrollbar
-    highlight link ScrollbarGitAdd GitGutterAdd
-    " highlight ScrollbarGitAddHandle    guifg=
-    highlight link ScrollbarGitChange GitGutterChange
-    " highlight ScrollbarGitChangeHandle guifg=
-    highlight link ScrollbarGitDelete GitGutterDelete
-    " highlight ScrollbarGitDeleteHandle guifg=
-
 endif
