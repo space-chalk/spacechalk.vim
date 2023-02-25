@@ -6,8 +6,11 @@ A theme trying to combine a love of neon space colors and pastel chalk board col
 This theme also includes support for:
 - [airline]
 - [gitgutter]
-- [NERDTree]
 - [ALE] - currently working on supporting this :)
+- [scrollbar.nvim] - currently working on supporting this :)
+
+In vim only:
+- [NERDTree]
 
 ## Installation
 
@@ -15,14 +18,14 @@ You should be able to install this fine with any vim/neovim plugin manager. (If 
 
 ### vim-plug
 
-```
+```vim
 Plug 'space-chalk/spacechalk.vim'
 ```
 
 ### packer
 
-```
-Use 'space-chalk/spacechalk.vim'
+```lua
+use {'space-chalk/spacechalk.vim'}
 ```
 
 ### manual
@@ -34,6 +37,8 @@ For the main scheme, you can just copy the [`colors/spacechalk.vim`](https://git
 For the airline theme, you can copy the [`autoload/airline/themes/spacechalk.vim`](https://github.com/jessebot/spacechalk/blob/main/autoload/airline/themes/spacechalk.vim) into your `~/.vim/autoload/airline/themes` directory.
 
 ## Setup
+
+### vim
 To enable this color scheme for vim, set it in your `.vimrc`:
 
 ```vim
@@ -47,6 +52,14 @@ This theme assumes gui colors. Add this to your `.vimrc` to enable true colors:
 if has('nvim') || has('termguicolors')
   set termguicolors
 endif
+```
+
+#### neovim (in lua)
+You can of course use vimscript instead of lua, but for those new to neovim, this is what you want to do:
+
+```lua
+-- you will want this after packer has been loaded
+vim.cmd.colorscheme("spacechalk")
 ```
 
 ### Airline
