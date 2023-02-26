@@ -132,6 +132,7 @@ highlight Number               guifg=#a8fd57
 highlight Float                guifg=#a8fd57
 highlight Delimeter            guifg=#f289f9
 highlight Comment              guifg=#a3a8f8 cterm=italic gui=italic
+highlight Conceal              guifg=#737aa2
 
 " comment, with the word TODO highlighted
 highlight Todo       guifg=#fdcd36 guibg=#2569aa
