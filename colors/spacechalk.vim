@@ -125,9 +125,6 @@ highlight Identifier           guifg=#5cc9fd
 highlight Function             guifg=#f7fb53 cterm=underline
 highlight Include              guifg=#3d59a1
 highlight Keyword              guifg=#5f87ff
-highlight @property            guifg=#f7fb53
-highlight @punctuation.bracket guifg=#f289f9
-highlight @constructor         guifg=#ffaff9
 highlight Operator             guifg=#fdcd36
 highlight String               guifg=#a8fd57
 highlight Boolean              guifg=#f7fb53
@@ -217,6 +214,13 @@ highlight GitGutterDelete guibg=#323232 guifg=#f289f9 ctermfg=1
 
 
 if has('nvim')
+    " ---------------------------- treesitter --------------------------------
+    " highlight @variable            guifg=#f7fb53
+    highlight @field               guifg=#6DF2E5
+    highlight @property            guifg=#f7fb53
+    highlight @punctuation.bracket guifg=#f289f9
+    highlight @constructor         guifg=#ffaff9
+
     " ---------------------- dashboard for nvim ------------------------------
     highlight DashboardHeader guifg=#fdcd36 ctermfg=3
     highlight DashboardFooter guifg=#585858 ctermfg=3
