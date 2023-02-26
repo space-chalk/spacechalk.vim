@@ -203,18 +203,14 @@ highlight gitcommitWarning       guifg=#f2748a
 highlight gitcommitBranch        guifg=#f7fb53
 highlight gitcommitHeader        guifg=#5cc9fd
 
-" -------------------------------- Gitgutter ---------------------------------
-" change sign column color for git to be the same as line number background
-highlight! link SignColumn LineNr
-" if a line is added, the symbol in the gutter will be green
-highlight GitGutterAdd    guibg=#323232 guifg=#a8fd57 ctermfg=2
-" if a line is modified, the symbol in the gutter will be yellow
-highlight GitGutterChange guibg=#323232 guifg=#f7fb53 ctermfg=3
-" if a line is deleted, the symbol in the gutter will be pink
-highlight GitGutterDelete guibg=#323232 guifg=#f289f9 ctermfg=1
-
-
 if has('nvim')
+    " ------------------------ Git signs -------------------------------------
+    highlight GitSignsAdd    guifg=#a8fd57 ctermfg=2
+    " if a line is modified, the symbol in the gutter will be yellow
+    highlight GitSignsChange guifg=#f7fb53 ctermfg=3
+    " if a line is deleted, the symbol in the gutter will be pink
+    highlight GitSignsDelete guifg=#f289f9 ctermfg=1
+
     " ---------------------------- treesitter --------------------------------
     " highlight @variable            guifg=#f7fb53
     highlight @field               guifg=#6DF2E5
@@ -229,7 +225,7 @@ if has('nvim')
 
     " -------------------------- scrollbar.nvim ------------------------------
     highlight ScrollbarHandle          guibg=#3E3E3E
-    highlight ScrollbarCursorHandle    guifg=#C1FF87 guibg=#5f87ff
+    highlight ScrollbarCursorHandle    guibg=#5f87ff
 
     highlight ScrollbarSearchHandle    guifg=#000000
     highlight ScrollbarSearch          guifg=#5cc9fd
@@ -246,6 +242,17 @@ endif
 
 
 if !has('nvim')
+    " -------------------------------- Gitgutter ---------------------------------
+    " change sign column color for git to be the same as line number background
+    highlight! link SignColumn LineNr
+    " if a line is added, the symbol in the gutter will be green
+    highlight GitGutterAdd    guibg=#323232 guifg=#a8fd57 ctermfg=2
+    " if a line is modified, the symbol in the gutter will be yellow
+    highlight GitGutterChange guibg=#323232 guifg=#f7fb53 ctermfg=3
+    " if a line is deleted, the symbol in the gutter will be pink
+    highlight GitGutterDelete guibg=#323232 guifg=#f289f9 ctermfg=1
+
+
     " ------------------------  NERDTree syntax colors ---------------------------
     highlight NERDTreeCWD guifg=#f6f76a
     highlight NERDTreeDirSlash guifg=#a8fd57

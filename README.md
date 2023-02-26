@@ -3,15 +3,20 @@ A theme trying to combine a love of neon space colors and pastel chalk board col
 
 <img src="./img/vim_example.png" style="width=800" alt="Screenshot of vim editing a python file with the nerdtree file browser plugin. It's showing off the Space Chalk Color Theme, featuring syntax highlight colors somewhere between pastel and neon on a very dark bluish purple background">
 
-This theme also includes support for:
-- [airline]
-- [gitgutter]
-- [ALE] - currently working on supporting this :)
-- [scrollbar.nvim](https://github.com/petertriho/nvim-scrollbar)
-- [barbecue](https://github.com/utilyre/barbecue.nvim)
+## Supported features
 
-In vim only:
+### vim
+- [ALE] - currently working on supporting this :)
+- [gitgutter]
 - [NERDTree]
+
+### neovim
+- [barbecue](https://github.com/utilyre/barbecue.nvim)
+- [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
+- [scrollbar.nvim](https://github.com/petertriho/nvim-scrollbar)
+
+### both vim and neovim
+- [airline]
 
 ## Installation
 
