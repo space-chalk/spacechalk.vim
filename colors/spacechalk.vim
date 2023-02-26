@@ -89,11 +89,15 @@ highlight Folded      guibg=#3E3E3E guifg=#ffaff9
 " =========== "General Vim Defaults Syntax Highlighting Colors" ==============
 
 " errors and warnings
-highlight ErrorMsg       guifg=#f2748a guibg=#3E3E3E
-highlight Error          guifg=#f2748a guibg=#3E3E3E
-highlight WarningMsg     guifg=#f289f9
+highlight Error       guifg=#f2748a guibg=#3E3E3E
+highlight link ErrorMsg        Error
+highlight link DiagnosticError Error
+highlight ALEErrorSign   guifg=#f2748a guibg=#323232
+
 " - ALE colors for errors and warnings
-highlight ALEErrorSign   guifg=#ff8d87 guibg=#323232
+highlight Warn     guifg=#f289f9
+highlight link WarningMsg Warn
+highlight link DiagnosticWarn Warn
 highlight ALEWarningSign guifg=#f289f9 guibg=#323232
 
 " regular messages
@@ -132,28 +136,29 @@ highlight SpecialKey guifg=#4a4a59
 
 " ------------------------------ Python Colors -------------------------------
 if !has('nvim')
-	highlight pythonDottedName      guifg=#5cc9fd
-	highlight pythonDot             guifg=#6DF2E5
+    " we have a custom syntax file for vim. in neovim, we rely on treesitter
+    highlight pythonDottedName      guifg=#5cc9fd
+    highlight pythonDot             guifg=#6DF2E5
 
-	highlight pythonBuiltinObject guifg=#ffaff9
+    highlight pythonBuiltinObject guifg=#ffaff9
 
-	highlight pythonLambdaExpr      guifg=#8787ff
+    highlight pythonLambdaExpr      guifg=#8787ff
 
-	" conditional operators like "==" or "!=" or "is" or "not"
-	highlight pythonExtraOperator   guifg=#fdcd36
+    " conditional operators like "==" or "!=" or "is" or "not"
+    highlight pythonExtraOperator   guifg=#fdcd36
 
-	" things like @option('--overwrite', '-O', is_flag=True)
-	highlight pythonDecorator guifg=#f7fb53
+    " things like @option('--overwrite', '-O', is_flag=True)
+    highlight pythonDecorator guifg=#f7fb53
 
-	" python strings
-	highlight pythonStrFormat cterm=bold guifg=#6DF2E5
-	highlight pythonStrFormatting cterm=bold guifg=#6DF2E5
+    " python strings
+    highlight pythonStrFormat cterm=bold guifg=#6DF2E5
+    highlight pythonStrFormatting cterm=bold guifg=#6DF2E5
 
 
-	highlight pythonBrackets        ctermfg=183 guifg=#5ac4b9
-	highlight default link pythonKeywordOperator pythonExtraOperator
-	highlight default link pythonDelimiter Delimeter
-	highlight link pythonBoolean Boolean
+    highlight pythonBrackets        ctermfg=183 guifg=#5ac4b9
+    highlight default link pythonKeywordOperator pythonExtraOperator
+    highlight default link pythonDelimiter Delimeter
+    highlight link pythonBoolean Boolean
 endif
 
 " --------------------------------- TOML -------------------------------------
