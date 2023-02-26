@@ -9,6 +9,7 @@
 "        #bdd8ff off blueish white
 "        #ffaff9 light pink
 "        #f289f9 neon magenta
+"        #d092fc  ------------------------ not currently in use
 "        #f2748a pale dark red
 "        #ff8d87 soft redish orange
 "        #fdcd36 light orange
@@ -16,11 +17,10 @@
 "        #f6f76a soft yellow
 "        #C1FF87 soft green
 "        #a8fd57 lime green
-"        #5ac4b9 dark cyan (this color feels weird, maybe change it)
 "        #6DF2E5 cyan
+"        #2ac3de dark cyan
 "        #5cc9fd blue
 "        #5f87ff cornflower blue
-"        #d092fc
 "        #a3a8f8 medium purple
 "
 "        #232336 blueish black
@@ -155,7 +155,7 @@ if !has('nvim')
     highlight pythonStrFormatting cterm=bold guifg=#6DF2E5
 
 
-    highlight pythonBrackets        ctermfg=183 guifg=#5ac4b9
+    highlight pythonBrackets        ctermfg=183 guifg=#2ac3de
     highlight default link pythonKeywordOperator pythonExtraOperator
     highlight default link pythonDelimiter Delimeter
     highlight link pythonBoolean Boolean
