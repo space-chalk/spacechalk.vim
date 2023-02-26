@@ -5,8 +5,6 @@
 " License:      GPLv3
 " Notes: 🎨 Colours for this theme
 "        --------------------------
-"        #E8FBFF bright white
-"        #bdd8ff off blueish white
 "        #ffaff9 light pink
 "        #f289f9 neon magenta
 "        #d092fc pinkish purple
@@ -20,28 +18,24 @@
 "        #6DF2E5 cyan
 "        #2ac3de dark cyan
 "        #5cc9fd blue
-"        #7dcfff ----------------- from tokyonight
+"        #7dcfff ----------------- from tokyonight - not in use
 "        #5f87ff cornflower blue
-"        #7aa2f7 ----------------- from tokyonight
+"        #7aa2f7 ----------------- from tokyonight - not in use
 "        #a3a8f8 medium purple
+"        #c0caf5 ----------------- from tokyonight - not in use
+"        #bdd8ff off blueish white
+"        #E8FBFF bright white
 "
 "        #232336 blueish black
 "        #1d2652 navy blue
 "        #2569aa darker blue
-"        #3d59a1
-"        #737aa2  bluish gray
-"        #585858 gray
+"        #3d59a1 ----------------- from tokyonight - not in use
+"        #737aa2 bluish gray
+"        #565f89 ----------------- from tokyonight - not in use
+"        #414868 ----------------- from tokyonight - not in use
 "        #3E3E3E darker gray
 "        #323232 grayish black
-
-" bluegrays from tokyonight that are not in use
-"       "#414868"
-"       "#3b4261"
-"       "#545c7e"
-"       "#565f89"
-"       "#737aa2"
-"       "#a9b1d6"
-"       "#c0caf5"
+"        #585858 gray
 
 let g:colors_name = "spacechalk"
 
@@ -77,17 +71,17 @@ highlight StatusLine guibg=#5f87ff guifg=#323232
 
 " -------------------------- "Pmenu (Popup menu)" ----------------------------
 "
-" Popup menu: Normal item - e.g. popup dropdown menus for tab complete
-highlight Pmenu    guibg=#1d2652 guifg=#5cc9fd
-" Popup menu: Selected item.
-highlight PMenuSel guibg=#323232 guifg=#fdcd36
-" Popup menu: Scrollbar.
-highlight PmenuSbar guifg=#3E3E3E
-" Popup menu: Thumb of the scrollbar.
+" Normal item - e.g. popup dropdown menus for tab complete
+highlight Pmenu      guibg=#1d2652 guifg=#5cc9fd
+" Selected item.
+highlight PMenuSel   guibg=#323232 guifg=#fdcd36
+" Scrollbar.
+highlight PmenuSbar  guifg=#3E3E3E
+" Thumb of the scrollbar.
 highlight PmenuThumb guifg=#5f87ff
 
-" =========================== "Selection/Search" =============================
 
+" =========================== "Selection/Search" =============================
 " Searching
 highlight clear Search
 highlight Search     guibg=#f7fb53 guifg=Black
@@ -102,16 +96,16 @@ highlight Folded      guibg=#3E3E3E guifg=#ffaff9
 " =========== "General Vim Defaults Syntax Highlighting Colors" ==============
 
 " errors and warnings
-highlight Error       guifg=#f2748a guibg=#3E3E3E
+highlight Error       guifg=#f2748a
 highlight link ErrorMsg        Error
 highlight link DiagnosticError Error
-highlight ALEErrorSign   guifg=#f2748a guibg=#323232
+highlight ALEErrorSign   guifg=#f2748a
 
 " - ALE colors for errors and warnings
 highlight Warn     guifg=#f289f9
 highlight link WarningMsg Warn
 highlight link DiagnosticWarn Warn
-highlight ALEWarningSign guifg=#f289f9 guibg=#323232
+highlight ALEWarningSign Warn
 
 " regular messages
 highlight MoreMsg guibg=#3E3E3E guifg=#a8fd57
@@ -155,7 +149,7 @@ if !has('nvim')
     highlight pythonDottedName      guifg=#5cc9fd
     highlight pythonDot             guifg=#6DF2E5
 
-    highlight pythonBuiltinObject guifg=#ffaff9
+    highlight pythonBuiltinObject   guifg=#ffaff9
 
     highlight pythonLambdaExpr      guifg=#8787ff
 
@@ -166,11 +160,11 @@ if !has('nvim')
     highlight pythonDecorator guifg=#f7fb53
 
     " python strings
-    highlight pythonStrFormat cterm=bold guifg=#6DF2E5
+    highlight pythonStrFormat     cterm=bold guifg=#6DF2E5
     highlight pythonStrFormatting cterm=bold guifg=#6DF2E5
 
 
-    highlight pythonBrackets        ctermfg=183 guifg=#2ac3de
+    highlight pythonBrackets      ctermfg=183 guifg=#2ac3de
     highlight default link pythonKeywordOperator pythonExtraOperator
     highlight default link pythonDelimiter Delimeter
     highlight link pythonBoolean Boolean
@@ -180,9 +174,9 @@ endif
 highlight default link tomlTable Function
 " highlight default link tomlTableArray Function
 highlight tomlDotInKey guifg=#5fafff
-highlight tomlBracket guifg=#f289f9
-highlight tomlCurly guifg=#5fafff
-highlight tomlComma guifg=#f289f9
+highlight tomlBracket  guifg=#f289f9
+highlight tomlCurly    guifg=#5fafff
+highlight tomlComma    guifg=#f289f9
 highlight tomlOperator guifg=#f7fb53
 
 " ------------------------------ HTML Colors ---------------------------------
@@ -221,6 +215,31 @@ highlight GitGutterChange guibg=#323232 guifg=#f7fb53 ctermfg=3
 " if a line is deleted, the symbol in the gutter will be pink
 highlight GitGutterDelete guibg=#323232 guifg=#f289f9 ctermfg=1
 
+
+if has('nvim')
+    " ---------------------- dashboard for nvim ------------------------------
+    highlight DashboardHeader guifg=#fdcd36 ctermfg=3
+    highlight DashboardFooter guifg=#585858 ctermfg=3
+
+
+    " -------------------------- scrollbar.nvim ------------------------------
+    highlight ScrollbarHandle          guibg=#3E3E3E
+    highlight ScrollbarCursorHandle    guifg=#C1FF87 guibg=#5f87ff
+
+    highlight ScrollbarSearchHandle    guifg=#000000
+    highlight ScrollbarSearch          guifg=#5cc9fd
+
+    " this works on ALE provided error and warnings
+    highlight ScrollbarErrorHandle     guifg=#f2748a guibg=#585858
+    highlight link ScrollbarError ScrollbarErrorHandle
+
+    highlight ScrollbarWarnHandle      guifg=#f289f9 guibg=#585858
+    highlight link ScrollbarWarn WarningMsg
+
+    highlight ScrollbarInfo guifg=#5cc9fd
+endif
+
+
 if !has('nvim')
     " ------------------------  NERDTree syntax colors ---------------------------
     highlight NERDTreeCWD guifg=#f6f76a
@@ -250,35 +269,12 @@ if !has('nvim')
     let g:NERDTreeExtensionHighlightColor['sh'] = 'a8fd57' " #a8fd57 lime green
 
     " ---------- NERDTree Git Plugin: Xuyuanp/nerdtree-git-plugin -------------
-    highlight NERDTreeGitStatusModified guifg=#fdcd36
-    highlight NERDTreeGitStatusStaged guifg=#a8fd57
-    highlight NERDTreeGitStatusRenamed guifg=#fdcd36
+    highlight NERDTreeGitStatusClean     guifg=#a8fd57
+    highlight NERDTreeGitStatusStaged    guifg=#a8fd57
+    highlight NERDTreeGitStatusModified  guifg=#fdcd36
+    highlight NERDTreeGitStatusRenamed   guifg=#fdcd36
+    highlight NERDTreeGitStatusDirty     guifg=#fdcd36
+    highlight NERDTreeGitStatusIgnored   guifg=#fdcd36
+    highlight NERDTreeGitStatusDeleted   guifg=#f289f9
     highlight NERDTreeGitStatusUntracked guifg=#f289f9
-    highlight NERDTreeGitStatusDirty guifg=#fdcd36
-    highlight NERDTreeGitStatusDeleted guifg=#f289f9
-    highlight NERDTreeGitStatusIgnored guifg=#fdcd36
-    highlight NERDTreeGitStatusClean guifg=#a8fd57
-endif
-
-if has('nvim')
-    " ---------------------- dashboard for nvim ------------------------------
-    highlight DashboardHeader guifg=#fdcd36 ctermfg=3
-    highlight DashboardFooter guifg=#585858 ctermfg=3
-
-
-    " -------------------------- scrollbar.nvim ------------------------------
-    highlight ScrollbarHandle          guibg=#3E3E3E
-    highlight ScrollbarCursorHandle    guifg=#C1FF87 guibg=#5f87ff
-
-    highlight ScrollbarSearchHandle    guifg=#000000
-    highlight ScrollbarSearch          guifg=#5cc9fd
-
-    " this works on ALE provided error and warnings
-    highlight ScrollbarErrorHandle     guifg=#f2748a guibg=#585858
-    highlight link ScrollbarError ScrollbarErrorHandle
-
-    highlight ScrollbarWarnHandle      guifg=#f289f9 guibg=#585858
-    highlight link ScrollbarWarn WarningMsg
-
-    highlight ScrollbarInfo guifg=#5cc9fd
 endif
