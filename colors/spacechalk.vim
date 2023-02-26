@@ -99,13 +99,13 @@ highlight Folded      guibg=#3E3E3E guifg=#ffaff9
 highlight Error       guifg=#f2748a
 highlight link ErrorMsg        Error
 highlight link DiagnosticError Error
-highlight ALEErrorSign   guifg=#f2748a
+highlight link ALEErrorSign
 
 " - ALE colors for errors and warnings
 highlight Warn     guifg=#f289f9
 highlight link WarningMsg Warn
 highlight link DiagnosticWarn Warn
-highlight ALEWarningSign Warn
+highlight link ALEWarningSign Warn
 
 " regular messages
 highlight MoreMsg guibg=#3E3E3E guifg=#a8fd57
