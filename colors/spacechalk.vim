@@ -204,6 +204,8 @@ highlight gitcommitBranch        guifg=#f7fb53
 highlight gitcommitHeader        guifg=#5cc9fd
 
 if has('nvim')
+    " change sign column color for git to be the same as line number background
+    highlight SignColumn guibg=#232336
     " ------------------------ Git signs -------------------------------------
     highlight GitSignsAdd    guifg=#a8fd57 ctermfg=2
     " if a line is modified, the symbol in the gutter will be yellow
