@@ -8,6 +8,7 @@ This theme also includes support for:
 - [gitgutter]
 - [ALE] - currently working on supporting this :)
 - [scrollbar.nvim](https://github.com/petertriho/nvim-scrollbar)
+- [barbecue](https://github.com/utilyre/barbecue.nvim)
 
 In vim only:
 - [NERDTree]
