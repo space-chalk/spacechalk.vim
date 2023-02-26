@@ -131,6 +131,7 @@ highlight Identifier           guifg=#5cc9fd
 highlight Function             guifg=#f7fb53 cterm=underline
 highlight Include              guifg=#3d59a1
 highlight Keyword              guifg=#5f87ff
+highlight @property            guifg=#f7fb53
 highlight @punctuation.bracket guifg=#f289f9
 highlight @constructor         guifg=#ffaff9
 highlight Operator             guifg=#fdcd36
