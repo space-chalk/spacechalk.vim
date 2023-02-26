@@ -9,7 +9,7 @@
 "        #bdd8ff off blueish white
 "        #ffaff9 light pink
 "        #f289f9 neon magenta
-"        #d092fc  ------------------------ not currently in use
+"        #d092fc pinkish purple
 "        #f2748a pale dark red
 "        #ff8d87 soft redish orange
 "        #fdcd36 light orange
@@ -20,15 +20,28 @@
 "        #6DF2E5 cyan
 "        #2ac3de dark cyan
 "        #5cc9fd blue
+"        #7dcfff ----------------- from tokyonight
 "        #5f87ff cornflower blue
+"        #7aa2f7 ----------------- from tokyonight
 "        #a3a8f8 medium purple
 "
 "        #232336 blueish black
 "        #1d2652 navy blue
 "        #2569aa darker blue
+"        #3d59a1
+"        #737aa2  bluish gray
 "        #585858 gray
 "        #3E3E3E darker gray
 "        #323232 grayish black
+
+" bluegrays from tokyonight that are not in use
+"       "#414868"
+"       "#3b4261"
+"       "#545c7e"
+"       "#565f89"
+"       "#737aa2"
+"       "#a9b1d6"
+"       "#c0caf5"
 
 let g:colors_name = "spacechalk"
 
@@ -56,7 +69,7 @@ highlight CursorLine  cterm=NONE guibg=#323232
 highlight ColorColumn guibg=#323232
 
 " for the split line between other windows, such as nerdtree
-highlight VertSplit guibg=#a8fd57 guifg=#3E3E3E
+highlight VertSplit guibg=#7aa2f7 guifg=#3E3E3E
 
 " I typically use airline, so this isn't really applicable, open to changes
 highlight StatusLine guibg=#5f87ff guifg=#323232
@@ -110,15 +123,16 @@ highlight SpellCap guibg=#fdcd36 guifg=#4a4a59
 
 " ----------- "Vim Programming defaults" -------------
 highlight Constant             guifg=#6DF2E5
-highlight Directory            guifg=#5cc9fd
-highlight Property             guifg=#5cc9fd
+highlight Directory            guifg=#737aa2
+highlight Property             guifg=#2ac3de
 highlight PreProc              guifg=#5cc9fd
-highlight Type                 guifg=#5cc9fd
+highlight Type                 guifg=#d092fc
 highlight Identifier           guifg=#5cc9fd
 highlight Function             guifg=#f7fb53 cterm=underline
-highlight Include              guifg=#5f87ff
+highlight Include              guifg=#3d59a1
 highlight Keyword              guifg=#5f87ff
 highlight @punctuation.bracket guifg=#f289f9
+highlight @constructor         guifg=#ffaff9
 highlight Operator             guifg=#fdcd36
 highlight String               guifg=#a8fd57
 highlight Boolean              guifg=#f7fb53
