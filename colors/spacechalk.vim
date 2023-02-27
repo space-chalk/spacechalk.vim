@@ -49,7 +49,7 @@ highlight clear
 " ----------------------------- "General Editor" -----------------------------
 
 " background of the whole editor and the plain text color
-highlight Normal      guibg=#232336 guifg=#bdd8ff
+highlight Normal      guibg=#232336 guifg=#c0caf5
 
 " line number line background and numbers
 highlight LineNr      guibg=#323232 guifg=#5f87ff
@@ -219,7 +219,6 @@ if has('nvim')
     highlight @property            guifg=#f7fb53
     highlight @punctuation.bracket guifg=#f289f9
     highlight @constructor         guifg=#ffaff9
-    highlight @spell               guifg=#c0caf5
     highlight @text.title          guifg=#f289f9
     highlight @text.quote          guifg=#737aa2
     highlight @text.uri            guifg=#3d59a1 
