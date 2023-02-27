@@ -22,15 +22,15 @@
 "        #5f87ff cornflower blue
 "        #7aa2f7 ----------------- from tokyonight - not in use
 "        #a3a8f8 medium purple
-"        #c0caf5 ----------------- from tokyonight - not in use
+"        #c0caf5 lightest purple 
 "        #bdd8ff off blueish white
 "        #E8FBFF bright white
 "
 "        #232336 blueish black
 "        #1d2652 navy blue
 "        #2569aa darker blue
-"        #3d59a1 ----------------- from tokyonight - not in use
-"        #737aa2 bluish gray
+"        #3d59a1 dark bluish gray 
+"        #737aa2 light bluish gray
 "        #565f89 ----------------- from tokyonight - not in use
 "        #414868 ----------------- from tokyonight - not in use
 "        #3E3E3E darker gray
@@ -166,27 +166,27 @@ if !has('nvim')
     highlight default link pythonKeywordOperator pythonExtraOperator
     highlight default link pythonDelimiter Delimeter
     highlight link pythonBoolean Boolean
+    " --------------------------------- TOML -----------------
+    highlight default link tomlTable Function
+    " highlight default link tomlTableArray Function
+    highlight tomlDotInKey guifg=#5fafff
+    highlight tomlBracket  guifg=#f289f9
+    highlight tomlCurly    guifg=#5fafff
+    highlight tomlComma    guifg=#f289f9
+    highlight tomlOperator guifg=#f7fb53
+
+    " ------------------------------ HTML Colors --------------
+    highlight link htmlTag     Type
+    highlight link htmlEndTag  htmlTag
+    highlight link htmlTagName htmlTag
+    highlight htmlH1 guifg=#f289f9
+    highlight htmlH2 guifg=#ffaff9
+
+    " ----------------------------- Markdown colors ---------
+    highlight markdownCode guifg=#a8fd57 guibg=#232336
+    highlight link markdownCodeBlock markdownCode
 endif
 
-" --------------------------------- TOML -------------------------------------
-highlight default link tomlTable Function
-" highlight default link tomlTableArray Function
-highlight tomlDotInKey guifg=#5fafff
-highlight tomlBracket  guifg=#f289f9
-highlight tomlCurly    guifg=#5fafff
-highlight tomlComma    guifg=#f289f9
-highlight tomlOperator guifg=#f7fb53
-
-" ------------------------------ HTML Colors ---------------------------------
-highlight link htmlTag     Type
-highlight link htmlEndTag  htmlTag
-highlight link htmlTagName htmlTag
-highlight htmlH1 guifg=#f289f9
-highlight htmlH2 guifg=#ffaff9
-
-" ----------------------------- Markdown colors ------------------------------
-highlight markdownCode guifg=#a8fd57 guibg=#232336
-highlight link markdownCodeBlock markdownCode
 
 
 " ------------------------------- Sass colors --------------------------------
@@ -219,6 +219,10 @@ if has('nvim')
     highlight @property            guifg=#f7fb53
     highlight @punctuation.bracket guifg=#f289f9
     highlight @constructor         guifg=#ffaff9
+    highlight @spell               guifg=#c0caf5
+    highlight @text.title          guifg=#f289f9
+    highlight @text.quote          guifg=#737aa2
+    highlight @text.uri            guifg=#3d59a1 
 
     " ---------------------- dashboard for nvim ------------------------------
     highlight DashboardHeader guifg=#fdcd36 ctermfg=3
