@@ -3,39 +3,26 @@
 " Maintainer:   https://github.com/jessebot
 " Last Change:  2022-10-29 12:11:06.0 +0200
 " License:      GPLv3
-" Notes: 🎨 Colours for this theme
-"        --------------------------
-"        #ffaff9 light pink
-"        #f289f9 neon magenta
-"        #d092fc pinkish purple
-"        #f2748a pale dark red
-"        #ff8d87 soft redish orange
-"        #fdcd36 light orange
-"        #f7fb53 bright yellow
-"        #f6f76a soft yellow
-"        #C1FF87 soft green
-"        #a8fd57 lime green
-"        #6DF2E5 cyan
-"        #2ac3de dark cyan
-"        #5cc9fd blue
-"        #7dcfff ----------------- from tokyonight - not in use
-"        #5f87ff cornflower blue
-"        #7aa2f7 light cornflower blue 
-"        #a3a8f8 medium purple
-"        #c0caf5 lightest purple 
-"        #bdd8ff off blueish white
-"        #E8FBFF bright white
-"
-"        #232336 blueish black
-"        #1d2652 navy blue
-"        #2569aa darker blue
-"        #3d59a1 dark bluish gray 
-"        #737aa2 light bluish gray
-"        #565f89 ----------------- from tokyonight - not in use
-"        #414868 ----------------- from tokyonight - not in use
-"        #3E3E3E darker gray
-"        #323232 grayish black
-"        #585858 gray
+" Notes: 🎨 Colours for this theme     
+"      --------------------------------------------------------------
+"      #ffaff9 light pink              |       #6DF2E5 cyan
+"      #f289f9 neon magenta            |       #2ac3de dark cyan
+"      #d092fc pinkish purple          |       #5cc9fd sky blue
+"      #f2748a pale dark red           |       #7dcfff lighter sky blue
+"      #ff8d87 soft redish orange      |       #5f87ff cornflower blue
+"      #fdcd36 light orange            |       #7aa2f7 light cornflower blue
+"      #f7fb53 bright yellow           |       #a3a8f8 medium purple
+"      #f9f986 soft yellow             |       #c0caf5 lightest purple
+"      #C1FF87 soft green              |       #bdd8ff off blueish white
+"      #a8fd57 lime green              |       #E8FBFF bright white
+"      #58ea48 darker lime green - not in use
+"      --------------------------------------------------------------
+"      #232336 blueish black           |      #585858 gray
+"      #1d2652 navy blue               |      #3E3E3E darker gray
+"      #2569aa darker blue             |      #323232 grayish black
+"      #3d59a1 dark bluish gray        |      #414868 - not in use
+"      #565f89 not in use
+"      --------------------------------------------------------------
 
 let g:colors_name = "spacechalk"
 
@@ -60,9 +47,9 @@ highlight Cursor      guibg=#a3a8f8 guifg=Black
 highlight CursorLine  cterm=NONE guibg=#323232
 
 " controls the column over 80 characters
-highlight ColorColumn guibg=#323232
+highlight ColorColumn guibg=#191927
 
-" for the split line between other windows, such as nerdtree
+" for the split line between panes
 highlight VertSplit guibg=#7aa2f7 guifg=#3E3E3E
 
 " I typically use airline, so this isn't really applicable, open to changes
@@ -259,7 +246,7 @@ if !has('nvim')
 
 
     " ------------------------  NERDTree syntax colors ---------------------------
-    highlight NERDTreeCWD guifg=#f6f76a
+    highlight NERDTreeCWD guifg=#f9f986
     highlight NERDTreeDirSlash guifg=#a8fd57
     highlight NERDTreeClosable guifg=#fdcd36
     highlight NERDTreeOpenable guifg=#f289f9
