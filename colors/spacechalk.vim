@@ -47,7 +47,7 @@ highlight Cursor      guibg=#a3a8f8 guifg=Black
 highlight CursorLine  cterm=NONE guibg=#323232
 
 " controls the column over 80 characters
-highlight ColorColumn guibg=#191927
+highlight ColorColumn guibg=#414868
 
 " for the split line between panes
 highlight VertSplit guibg=#7aa2f7 guifg=#3E3E3E
