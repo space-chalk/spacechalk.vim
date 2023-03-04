@@ -20,7 +20,7 @@
 "        #5cc9fd blue
 "        #7dcfff ----------------- from tokyonight - not in use
 "        #5f87ff cornflower blue
-"        #7aa2f7 ----------------- from tokyonight - not in use
+"        #7aa2f7 light cornflower blue 
 "        #a3a8f8 medium purple
 "        #c0caf5 lightest purple 
 "        #bdd8ff off blueish white
@@ -123,7 +123,7 @@ highlight PreProc              guifg=#5cc9fd
 highlight Type                 guifg=#d092fc
 highlight Identifier           guifg=#5cc9fd
 highlight Function             guifg=#f7fb53 cterm=underline
-highlight Include              guifg=#3d59a1
+highlight Include              guifg=#7aa2f7
 highlight Keyword              guifg=#5f87ff
 highlight Operator             guifg=#fdcd36
 highlight String               guifg=#a8fd57
