@@ -123,7 +123,7 @@ highlight PreProc              guifg=#5cc9fd
 highlight Type                 guifg=#d092fc
 highlight Identifier           guifg=#5cc9fd
 highlight Function             guifg=#f7fb53 cterm=underline
-highlight Include              guifg=#d092fc
+highlight Include              guifg=#bdd8ff
 highlight Keyword              guifg=#5f87ff
 highlight Operator             guifg=#fdcd36
 highlight String               guifg=#a8fd57
