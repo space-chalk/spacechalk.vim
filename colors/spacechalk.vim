@@ -207,6 +207,7 @@ if has('nvim')
     highlight @punctuation.bracket guifg=#f289f9
     highlight @constructor         guifg=#ffaff9
     highlight @text.title          guifg=#f289f9
+    highlight @text.literal        guifg=#C1FF87
     highlight @text.quote          guifg=#737aa2
     highlight @text.uri            guifg=#3d59a1 
 
