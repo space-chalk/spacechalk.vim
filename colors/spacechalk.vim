@@ -209,7 +209,7 @@ if has('nvim')
     highlight @text.title          guifg=#f289f9
     highlight @text.literal        guifg=#C1FF87
     highlight @text.quote          guifg=#737aa2
-    highlight @text.uri            guifg=#3d59a1 
+    highlight @text.uri            guifg=#5f87ff
 
     " ---------------------- dashboard for nvim ------------------------------
     highlight DashboardHeader guifg=#fdcd36 ctermfg=3
