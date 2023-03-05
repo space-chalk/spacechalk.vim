@@ -212,8 +212,8 @@ if has('nvim')
     highlight @tag                 guifg=#f289f9
     highlight @tag.delimiter       guifg=#ffb8a8
     highlight @tag.attribute       guifg=#d092fc
-    highlight @text.title          guifg=#ffaff9 guibg=#3E3E3E gui=bold
-    highlight @text.literal        guifg=#C1FF87
+    highlight @text.title          guifg=#C1FF87 guibg=#414868 gui=bold
+    highlight @text.literal        guifg=#fdcd36
     highlight @text.quote          guifg=#737aa2 cterm=italic gui=italic
     highlight @text.uri            guifg=#5f87ff
 
