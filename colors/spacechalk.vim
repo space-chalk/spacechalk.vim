@@ -210,11 +210,11 @@ if has('nvim')
     highlight @constructor         guifg=#ffaff9
     " ----- used in html and markdown
     highlight @tag                 guifg=#f9f986
-    highlight @tag.delimer         guifg=#ffb8a8
-    highlight @tag.attibute        guifg=#d092fc
-    highlight @text.title          guifg=#E8FBFF cterm=underline
+    highlight @tag.delimiter       guifg=#ffb8a8
+    highlight @tag.attribute       guifg=#d092fc
+    highlight @text.title          guifg=#f289f9 gui=underline
     highlight @text.literal        guifg=#C1FF87
-    highlight @text.quote          guifg=#737aa2 cterm=italic
+    highlight @text.quote          guifg=#737aa2 gui=italic
     highlight @text.uri            guifg=#5f87ff
 
     " ---------------------- dashboard for nvim ------------------------------
