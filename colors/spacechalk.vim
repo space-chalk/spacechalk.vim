@@ -206,7 +206,7 @@ if has('nvim')
     highlight @field               guifg=#6DF2E5
     highlight @property            guifg=#f7fb53
     highlight @punctuation.bracket guifg=#f289f9
-    highlight @punctuation.special guifg=#ffb8a8
+    highlight @punctuation.special guifg=#f289f9
     highlight @constructor         guifg=#ffaff9
     " ----- used in html and markdown
     highlight @tag                 guifg=#7dcfff
