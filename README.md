@@ -6,14 +6,15 @@ A theme trying to combine a love of neon space colors and pastel chalk board col
 ## Supported features
 
 ### vim
-- [ALE] - currently working on supporting this :)
 - [gitgutter]
 - [NERDTree]
+- [ALE] - partial support
 
 ### neovim
 - [barbecue](https://github.com/utilyre/barbecue.nvim)
 - [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
 - [scrollbar.nvim](https://github.com/petertriho/nvim-scrollbar)
+- Telescope - currently working on this
 
 ### both vim and neovim
 - [airline]

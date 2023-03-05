@@ -68,7 +68,6 @@ highlight PmenuSbar  guifg=#3E3E3E
 " Thumb of the scrollbar.
 highlight PmenuThumb guifg=#5f87ff
 
-
 " =========================== "Selection/Search" =============================
 " Searching
 highlight clear Search
@@ -221,10 +220,14 @@ if has('nvim')
     highlight DashboardHeader guifg=#fdcd36 ctermfg=3
     highlight DashboardFooter guifg=#585858 ctermfg=3
 
+    " -------------------------- Telescope -----------------------------------
+    highlight TelescopeTitle guifg=#a8fd57 gui=bold
+    highlight TelescopeBorder guifg=#fdcd36
 
     " -------------------------- scrollbar.nvim ------------------------------
     highlight ScrollbarHandle          guibg=#3E3E3E
     highlight ScrollbarCursorHandle    guibg=#5f87ff
+    highlight ScrollbarCursor          guibg=#5f87ff
 
     highlight ScrollbarSearchHandle    guifg=#000000
     highlight ScrollbarSearch          guifg=#5cc9fd
@@ -289,3 +292,48 @@ if !has('nvim')
     highlight NERDTreeGitStatusDeleted   guifg=#f289f9
     highlight NERDTreeGitStatusUntracked guifg=#f289f9
 endif
+
+
+
+" TelescopeResultsFileIcon link Normal
+" TelescopeResultsDiffChange link DiffChange
+" TelescopeResultsDiffAdd link DiffAdd
+" TelescopeResultsDiffDelete link DiffDelete
+" TelescopeResultsDiffUntracked link NonText
+" TelescopePromptTitle link TelescopeTitle
+"TelescopePreviewBorder link TelescopeBorder
+" TelescopeSelection link Visual
+" TelescopeSelectionCaret link TelescopeSelection
+" TelescopeMultiSelection link Type
+" TelescopeMultiIcon link Identifier
+" TelescopeNormal link Normal
+" TelescopePreviewNormal link TelescopeNormal
+" TelescopePromptNormal link TelescopeNormal
+" TelescopeResultsNormal link TelescopeNormal
+" TelescopePromptBorder link TelescopeBorder
+" TelescopeResultsBorder link TelescopeBorder
+" TelescopeResultsTitle link TelescopeTitle
+" TelescopePreviewTitle link TelescopeTitle
+" TelescopePromptCounter link NonText
+" TelescopeMatching link Special
+" TelescopePromptPrefix link Identifier
+" TelescopePreviewLine link Visual
+" TelescopePreviewMatch link Search
+" TelescopePreviewPipe link Constant
+" TelescopePreviewCharDev link Constant
+" TelescopePreviewDirectory link Directory
+" TelescopePreviewBlock link Constant
+" TelescopePreviewLink link Special
+" TelescopePreviewSocket link Statement
+" TelescopePreviewRead link Constant
+" TelescopePreviewWrite link Statement
+" TelescopePreviewExecute link String
+" TelescopePreviewHyphen link NonText
+" TelescopePreviewSticky link Keyword
+" TelescopePreviewSize link String
+" TelescopePreviewUser link Constant
+" TelescopePreviewGroup link Constant
+" TelescopePreviewDate link Directory
+" TelescopePreviewMessage link TelescopePreviewNormal
+" TelescopePreviewMessageFillchar link TelescopePreviewMessage
+" TelescopeResultsClass link Function
