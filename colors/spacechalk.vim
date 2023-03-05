@@ -209,7 +209,7 @@ if has('nvim')
     highlight @punctuation.special guifg=#ffb8a8
     highlight @constructor         guifg=#ffaff9
     " ----- used in html and markdown
-    highlight @tag                 guifg=#f289f9
+    highlight @tag                 guifg=#7dcfff
     highlight @tag.delimiter       guifg=#ffb8a8
     highlight @tag.attribute       guifg=#d092fc
     highlight @text.title          guifg=#C1FF87 guibg=#414868 gui=bold
