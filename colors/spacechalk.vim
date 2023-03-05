@@ -5,22 +5,23 @@
 " License:      GPLv3
 " Notes: 🎨 Colours for this theme     
 "      --------------------------------------------------------------
-"      #ffaff9 light pink              |       #6DF2E5 cyan
-"      #f289f9 neon magenta            |       #2ac3de dark cyan
-"      #d092fc pinkish purple          |       #5cc9fd sky blue
-"      #f2748a pale dark red           |       #7dcfff lighter sky blue
-"      #ff8d87 soft redish orange      |       #5f87ff cornflower blue
-"      #fdcd36 light orange            |       #7aa2f7 light cornflower blue
-"      #f7fb53 bright yellow           |       #a3a8f8 medium purple
-"      #f9f986 soft yellow             |       #c0caf5 lightest purple
-"      #C1FF87 soft green              |       #bdd8ff off blueish white
-"      #a8fd57 lime green              |       #E8FBFF bright white
-"      #58ea48 darker lime green - not in use
+"      #ffaff9 light pink           |   #6DF2E5 cyan
+"      #f289f9 neon magenta         |   #2ac3de dark cyan
+"      #d092fc pinkish purple       |   #5cc9fd sky blue
+"      #f2748a pale dark red        |   #7dcfff lighter sky blue
+"      #ff8d87 soft redish orange   |   #5f87ff cornflower blue
+"      #ffb8a8 light redish orange
+"      #fdcd36 light orange         |   #7aa2f7 light cornflower blue
+"      #f7fb53 bright yellow        |   #a3a8f8 medium purple
+"      #f9f986 soft yellow          |   #c0caf5 lightest purple
+"      #C1FF87 soft green           |   #bdd8ff off blueish white
+"      #a8fd57 lime green           |   #E8FBFF bright white
+"      #58ea48 darker lime green
 "      --------------------------------------------------------------
-"      #232336 blueish black           |      #585858 gray
-"      #1d2652 navy blue               |      #3E3E3E darker gray
-"      #2569aa darker blue             |      #323232 grayish black
-"      #3d59a1 dark bluish gray        |      #414868 - not in use
+"      #232336 blueish black        |   #585858 gray
+"      #1d2652 navy blue            |   #3E3E3E darker gray
+"      #2569aa darker blue          |   #323232 grayish black
+"      #3d59a1 dark bluish gray     |   #414868 - not in use
 "      #565f89 not in use
 "      --------------------------------------------------------------
 
@@ -201,14 +202,19 @@ if has('nvim')
     highlight GitSignsDelete guifg=#f289f9 ctermfg=1
 
     " ---------------------------- treesitter --------------------------------
-    " highlight @variable            guifg=#f7fb53
+    " highlight @variable            guifg=
     highlight @field               guifg=#6DF2E5
     highlight @property            guifg=#f7fb53
     highlight @punctuation.bracket guifg=#f289f9
+    highlight @punctuation.special guifg=#ffb8a8
     highlight @constructor         guifg=#ffaff9
-    highlight @text.title          guifg=#f289f9
+    " ----- used in html and markdown
+    highlight @tag                 guifg=#f9f986
+    highlight @tag.delimer         guifg=#ffb8a8
+    highlight @tag.attibute        guifg=#d092fc
+    highlight @text.title          guifg=#E8FBFF cterm=underline
     highlight @text.literal        guifg=#C1FF87
-    highlight @text.quote          guifg=#737aa2
+    highlight @text.quote          guifg=#737aa2 cterm=italic
     highlight @text.uri            guifg=#5f87ff
 
     " ---------------------- dashboard for nvim ------------------------------
