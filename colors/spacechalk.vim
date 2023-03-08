@@ -242,19 +242,19 @@ if has('nvim')
     highlight ScrollbarInfo guifg=#5cc9fd
 
     " --------------------------- barbar: tab bar ----------------------------
-    let fg_target = 'blue'
+    highlight fg_target guifg=#000000
 
-    let fg_current  = s:fg(['Normal'], '#efefef')
-    let fg_visible  = s:fg(['TabLineSel'], '#efefef')
-    let fg_inactive = s:fg(['TabLineFill'], '#888888')
+    highlight fg_current  guifg=#efefef
+    highlight fg_visible  guifg=#efefef
+    highlight fg_inactive guifg=#888888
 
-    let fg_modified  = s:fg(['WarningMsg'], '#E5AB0E')
-    let fg_special  = s:fg(['Special'], '#599eff')
-    let fg_subtle  = s:fg(['NonText', 'Comment'], '#555555')
+    highlight fg_modified  guifg=#E5AB0E
+    highlight fg_special   guifg=#599eff
+    highlight fg_subtle  guifg=#555555
 
-    let bg_current  = s:bg(['Normal'], '#000000')
-    let bg_visible  = s:bg(['TabLineSel', 'Normal'], '#000000')
-    let bg_inactive = s:bg(['TabLineFill', 'StatusLine'], '#000000')
+    highlight bg_current  guibg=#000000
+    highlight bg_visible  guibg=#000000
+    highlight bg_inactive guibg=#000000
 endif
 
 
