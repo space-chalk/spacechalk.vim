@@ -11,7 +11,7 @@ The author of this plugin actively uses neovim, but used to use vim exclusively.
 - [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
 - [scrollbar.nvim](https://github.com/petertriho/nvim-scrollbar)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim) - currently working on this
-- [barbar](https://github.com/romgrk/barbar.nvim) - currently working on this
+- [barbar](https://github.com/romgrk/barbar.nvim)
 
 ### vim
 Supported only when someone raises an issue:
