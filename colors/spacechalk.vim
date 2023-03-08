@@ -5,13 +5,14 @@
 " License:      GPLv3
 " Notes: 🎨 Colours for this theme
 "      --------------------------------------------------------------
-"      #ffaff9 light pink           |   #6DF2E5 cyan
-"      #f289f9 neon magenta         |   #2ac3de dark cyan
-"      #d092fc pinkish purple       |   #5cc9fd sky blue
-"      #f2748a pale dark red        |   #7dcfff lighter sky blue
-"      #ff8d87 soft redish orange   |   #5f87ff cornflower blue
-"      #ffb8a8 light redish orange
+"      #ffaff9 light pink           |   
+"      #f289f9 neon magenta         |   #6DF2E5 cyan
+"      #d092fc pinkish purple       |   #2ac3de dark cyan
+"      #f2748a pale dark red        |   #5cc9fd sky blue
+"      #ff8d87 soft redish orange   |   #7dcfff lighter sky blue
+"      #ffb8a8 light redish orange  |   #5f87ff cornflower blue
 "      #fdcd36 light orange         |   #7aa2f7 light cornflower blue
+"      #b5b73e grayed out yellow 
 "      #f7fb53 bright yellow        |   #a3a8f8 medium purple
 "      #f9f986 soft yellow          |   #c0caf5 lightest purple
 "      #C1FF87 soft green           |   #bdd8ff off blueish white
@@ -74,10 +75,10 @@ highlight clear Search
 highlight Search     guibg=#f7fb53 guifg=Black
 
 " Visual mode [visual, v-line, v-block] highlighting of any kind
-highlight Visual      guibg=#2569aa guifg=#a8fd57
+highlight Visual     guibg=#2569aa guifg=#a8fd57
 
 " Folded code: collapsed blocks/regions of code
-highlight Folded      guibg=#3E3E3E guifg=#ffaff9
+highlight Folded     guibg=#3E3E3E guifg=#ffaff9
 
 
 " =========== "General Vim Defaults Syntax Highlighting Colors" ==============
@@ -201,13 +202,13 @@ if has('nvim')
 
     highlight BufferVisible        guifg=#2569aa     guibg=#414868
     highlight BufferVisibleIndex   guifg=#2569aa     guibg=#414868
-    highlight BufferVisibleMod     guifg=#f7fb53     guibg=#414868
+    highlight BufferVisibleMod     guifg=#b5b73e     guibg=#414868
     highlight BufferVisibleSign    guifg=#2569aa     guibg=#414868
     highlight BufferVisibleTarget  guifg=#bdd8ff     guibg=#414868 gui=bold
 
     highlight BufferInactive       guifg=#3d59a1     guibg=#3E3E3E
     highlight BufferInactiveIndex  guifg=#C1FF87     guibg=#3E3E3E
-    highlight BufferInactiveMod    guifg=#f7fb53     guibg=#3E3E3E
+    highlight BufferInactiveMod    guifg=#b5b73e     guibg=#3E3E3E
     highlight BufferInactiveSign   guifg=#3d59a1     guibg=#3E3E3E
     highlight BufferInactiveTarget guifg=#bdd8ff     guibg=#3E3E3E gui=bold
 
