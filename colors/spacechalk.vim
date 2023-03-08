@@ -212,7 +212,7 @@ if has('nvim')
     highlight BufferInactiveTarget guifg=#bdd8ff     guibg=#3E3E3E gui=bold
 
     highlight BufferTabpages       guifg=#f289f9     guibg=#3E3E3E gui=bold
-    highlight BufferTabpageFill    guifg=#3d59a1     guibg=#3E3E3E
+    highlight BufferTabpageFill    guifg=#3d59a1     guibg=#232336
 
     highlight link BufferCurrentIcon  BufferCurrent
     highlight link BufferVisibleIcon  BufferVisible
