@@ -242,19 +242,47 @@ if has('nvim')
     highlight ScrollbarInfo guifg=#5cc9fd
 
     " --------------------------- barbar: tab bar ----------------------------
-    highlight fg_target guifg=#000000
+    let s:bg_current = '#232336'
+    let s:bg_visible = '#232336'
+    let s:bg_other   = '#000000'
+    let s:bg_alt     = '#3E3E3E'
+    let s:blue       = '#5cc9fd'
+    let s:red        = '#f2748a'
+    let s:yellow     = '#f9f986'
+    " these are all grays
+    let s:base4       = '#323232'
+    let s:base6       = '#3E3E3E'
+    let s:base7       = '#585858'
+    let s:base9       = '#bdd8ff'
 
-    highlight fg_current  guifg=#efefef
-    highlight fg_visible  guifg=#efefef
-    highlight fg_inactive guifg=#888888
+    call s:_('TabLine',             s:base9, s:bg_alt,     '')
+    call s:_('TabLineSel',          s:blue,  s:bg_current, 'bold')
+    call s:_('TabLineFill',         'none',  s:bg_other,   'bold')
 
-    highlight fg_modified  guifg=#E5AB0E
-    highlight fg_special   guifg=#599eff
-    highlight fg_subtle  guifg=#555555
+    call s:_('BufferCurrent',       s:base9,          s:bg_current,  'none')
+    call s:_('BufferCurrentIndex',  s:base6,          s:bg_current,  'none')
+    call s:_('BufferCurrentMod',    s:yellow,         s:bg_current,  'none')
+    call s:_('BufferCurrentSign',   s:blue,           s:bg_current,  'none')
+    call s:_('BufferCurrentTarget', s:red,            s:bg_current,  'bold')
 
-    highlight bg_current  guibg=#000000
-    highlight bg_visible  guibg=#000000
-    highlight bg_inactive guibg=#000000
+    call s:_('BufferVisible',       s:base7,          s:bg_visible,  'none')
+    call s:_('BufferVisibleIndex',  s:base9,          s:bg_visible,  'none')
+    call s:_('BufferVisibleMod',    s:yellow,         s:bg_visible,  'none')
+    call s:_('BufferVisibleSign',   s:base4,          s:bg_visible,  'none')
+    call s:_('BufferVisibleTarget', s:red,            s:bg_visible,  'bold')
+
+    call s:_('BufferInactive',       s:base6,          s:bg_other,    'none')
+    call s:_('BufferInactiveIndex',  s:base6,          s:bg_other,    'none')
+    call s:_('BufferInactiveMod',    s:yellow,         s:bg_other,    'none')
+    call s:_('BufferInactiveSign',   s:base4,          s:bg_other,    'none')
+    call s:_('BufferInactiveTarget', s:red,            s:bg_other,    'bold')
+
+    call s:_('BufferTabpages',       s:blue,           s:bg_statusline, 'bold')
+    call s:_('BufferTabpageFill',    s:base4,          s:bg_other,    'bold')
+    call s:_('BufferOffset',         s:base6,          s:bg,          'bold')
+
+    call s:_('BufferPart',        s:blue,   s:base9, 'bold')
+    " let s:diff_info_bg0 = color#Mix('#D8EEFD', s:bg, 0.6) 
 endif
 
 
