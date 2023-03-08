@@ -21,8 +21,8 @@
 "      #232336 blueish black        |   #585858 gray
 "      #1d2652 navy blue            |   #3E3E3E darker gray
 "      #2569aa darker blue          |   #323232 grayish black
-"      #3d59a1 dark bluish gray     |   #414868 - not in use
-"      #565f89 not in use
+"      #3d59a1 medium bluish gray   |   #414868 dark blue gray
+"      #565f89 light blue grey 
 "      --------------------------------------------------------------
 
 let g:colors_name = "spacechalk"
@@ -133,11 +133,12 @@ highlight SpecialKey guifg=#4a4a59
 "
 highlight DiffText guifg=#fdcd36
 
-highlight gitcommitSelectedFile  guifg=#a8fd57
-highlight gitcommitDiscardedFile guifg=#f289f9
-highlight gitcommitWarning       guifg=#f2748a
-highlight gitcommitBranch        guifg=#f7fb53
-highlight gitcommitHeader        guifg=#5cc9fd
+" not sure if this is in use
+" highlight gitcommitSelectedFile  guifg=#a8fd57
+" highlight gitcommitDiscardedFile guifg=#f289f9
+" highlight gitcommitWarning       guifg=#f2748a
+" highlight gitcommitBranch        guifg=#f7fb53
+" highlight gitcommitHeader        guifg=#5cc9fd
 
 " for nvim specific plugins, does not work with vim
 if has('nvim')
@@ -192,31 +193,26 @@ if has('nvim')
     highlight ScrollbarInfo guifg=#5cc9fd
 
     " ------------------------ barbar: tab bar ----------------------------
-    "   #232336 blueish black        |   #585858 gray
-    "   #1d2652 navy blue            |   #3E3E3E darker gray
-    "   #2569aa darker blue          |   #323232 grayish black
-    "   #3d59a1 dark bluish gray     |   #414868 - not in use
-    "   #565f89 not in use
     highlight BufferCurrent        guifg=#5cc9fd     guibg=#565f89
-    highlight BufferCurrentIndex   guifg=fg_special  guibg=#565f89
-    highlight BufferCurrentMod     guifg=fg_modified guibg=#565f89
-    highlight BufferCurrentSign    guifg=fg_special  guibg=#565f89
-    highlight BufferCurrentTarget  guifg=fg_target   guibg=#565f89 gui=bold
+    highlight BufferCurrentIndex   guifg=#f289f9     guibg=#565f89
+    highlight BufferCurrentMod     guifg=#f7fb53     guibg=#565f89
+    highlight BufferCurrentSign    guibg=#565f89
+    highlight BufferCurrentTarget  guifg=#bdd8ff     guibg=#565f89 gui=bold
 
-    highlight BufferVisible        guifg=fg_visible  guibg=#414868
-    highlight BufferVisibleIndex   guifg=fg_visible  guibg=#414868
-    highlight BufferVisibleMod     guifg=fg_modified guibg=#414868
-    highlight BufferVisibleSign    guifg=fg_visible  guibg=#414868
-    highlight BufferVisibleTarget  guifg=fg_target   guibg=#414868 gui=bold
+    highlight BufferVisible        guifg=#2569aa     guibg=#414868
+    highlight BufferVisibleIndex   guifg=#2569aa     guibg=#414868
+    highlight BufferVisibleMod     guifg=#f7fb53     guibg=#414868
+    highlight BufferVisibleSign    guifg=#2569aa     guibg=#414868
+    highlight BufferVisibleTarget  guifg=#bdd8ff     guibg=#414868 gui=bold
 
-    highlight BufferInactive       guifg=fg_inactive guibg=#3E3E3E
-    highlight BufferInactiveIndex  guifg=fg_subtle   guibg=#3E3E3E
-    highlight BufferInactiveMod    guifg=fg_modified guibg=#3E3E3E
-    highlight BufferInactiveSign   guifg=fg_subtle   guibg=#3E3E3E
-    highlight BufferInactiveTarget guifg=fg_target   guibg=#3E3E3E gui=bold
+    highlight BufferInactive       guifg=#3d59a1     guibg=#3E3E3E
+    highlight BufferInactiveIndex  guifg=#C1FF87     guibg=#3E3E3E
+    highlight BufferInactiveMod    guifg=#f7fb53     guibg=#3E3E3E
+    highlight BufferInactiveSign   guifg=#3d59a1     guibg=#3E3E3E
+    highlight BufferInactiveTarget guifg=#bdd8ff     guibg=#3E3E3E gui=bold
 
-    highlight BufferTabpages       guifg=fg_special  guibg=#3E3E3E gui=bold
-    highlight BufferTabpageFill    guifg=fg_inactive guibg=#3E3E3E
+    highlight BufferTabpages       guifg=#f289f9     guibg=#3E3E3E gui=bold
+    highlight BufferTabpageFill    guifg=#3d59a1     guibg=#3E3E3E
 
     highlight link BufferCurrentIcon  BufferCurrent
     highlight link BufferVisibleIcon  BufferVisible
