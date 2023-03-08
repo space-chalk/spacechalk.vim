@@ -249,39 +249,40 @@ if has('nvim')
     let s:blue       = '#5cc9fd'
     let s:red        = '#f2748a'
     let s:yellow     = '#f9f986'
+
     " these are all grays
     let s:base4       = '#323232'
     let s:base6       = '#3E3E3E'
     let s:base7       = '#585858'
     let s:base9       = '#bdd8ff'
 
-    call s:_('TabLine',             s:base9, s:bg_alt,     '')
-    call s:_('TabLineSel',          s:blue,  s:bg_current, 'bold')
-    call s:_('TabLineFill',         'none',  s:bg_other,   'bold')
+    highlight TabLine             guifg=s:base9 guibg=s:bg_alt
+    highlight TabLineSel          guifg=s:blue  guibg=s:bg_current gui=bold
+    highlight TabLineFill         guifg=s:none  guibg=s:bg_other   gui=bold
 
-    call s:_('BufferCurrent',       s:base9,          s:bg_current,  'none')
-    call s:_('BufferCurrentIndex',  s:base6,          s:bg_current,  'none')
-    call s:_('BufferCurrentMod',    s:yellow,         s:bg_current,  'none')
-    call s:_('BufferCurrentSign',   s:blue,           s:bg_current,  'none')
-    call s:_('BufferCurrentTarget', s:red,            s:bg_current,  'bold')
+    highlight BufferCurrent       guifg=s:base9     guibg=s:bg_current  
+    highlight BufferCurrentIndex  guifg=s:base6     guibg=s:bg_current  
+    highlight BufferCurrentMod    guifg=s:yellow    guibg=s:bg_current  
+    highlight BufferCurrentSign   guifg=s:blue      guibg=s:bg_current  
+    highlight BufferCurrentTarget guifg=s:red       guibg=s:bg_current  gui=bold
 
-    call s:_('BufferVisible',       s:base7,          s:bg_visible,  'none')
-    call s:_('BufferVisibleIndex',  s:base9,          s:bg_visible,  'none')
-    call s:_('BufferVisibleMod',    s:yellow,         s:bg_visible,  'none')
-    call s:_('BufferVisibleSign',   s:base4,          s:bg_visible,  'none')
-    call s:_('BufferVisibleTarget', s:red,            s:bg_visible,  'bold')
+    highlight BufferVisible       guifg=s:base7     guibg=s:bg_visible  
+    highlight BufferVisibleIndex  guifg=s:base9     guibg=s:bg_visible  
+    highlight BufferVisibleMod    guifg=s:yellow    guibg=s:bg_visible  
+    highlight BufferVisibleSign   guifg=s:base4     guibg=s:bg_visible  
+    highlight BufferVisibleTarget guifg=s:red       guibg=s:bg_visible  gui=bold
 
-    call s:_('BufferInactive',       s:base6,          s:bg_other,    'none')
-    call s:_('BufferInactiveIndex',  s:base6,          s:bg_other,    'none')
-    call s:_('BufferInactiveMod',    s:yellow,         s:bg_other,    'none')
-    call s:_('BufferInactiveSign',   s:base4,          s:bg_other,    'none')
-    call s:_('BufferInactiveTarget', s:red,            s:bg_other,    'bold')
+    highlight BufferInactive       guifg=s:base6     guibg=s:bg_other    
+    highlight BufferInactiveIndex  guifg=s:base6     guibg=s:bg_other    
+    highlight BufferInactiveMod    guifg=s:yellow    guibg=s:bg_other    
+    highlight BufferInactiveSign   guifg=s:base4     guibg=s:bg_other    
+    highlight BufferInactiveTarget guifg=s:red       guibg=s:bg_other    gui=bold
 
-    call s:_('BufferTabpages',       s:blue,           s:bg_current, 'bold')
-    call s:_('BufferTabpageFill',    s:base4,          s:bg_other,    'bold')
-    call s:_('BufferOffset',         s:base6,          s:bg,          'bold')
+    highlight BufferTabpages       guifg=s:blue      guibg=s:bg_current  gui=bold
+    highlight BufferTabpageFill    guifg=s:base4     guibg=s:bg_other    gui=bold
+    highlight BufferOffset         guifg=s:base6     guibg=s:bg_current  gui=bold
 
-    call s:_('BufferPart',        s:blue,   s:base9, 'bold')
+    highlight BufferPart   guibg=s:blue   guibg=s:base9 gui=bold
     " let s:diff_info_bg0 = color#Mix('#D8EEFD', s:bg, 0.6) 
 endif
 
