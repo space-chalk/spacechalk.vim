@@ -1,7 +1,6 @@
 " Vim Color File for Space Chalk theme :3
 " Name:         spacechalk.vim
 " Maintainer:   https://github.com/jessebot
-" Last Change:  2022-10-29 12:11:06.0 +0200
 " License:      GPLv3
 " Notes: 🎨 Colours for this theme
 "      --------------------------------------------------------------
