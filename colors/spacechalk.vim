@@ -3,7 +3,7 @@
 " Maintainer:   https://github.com/jessebot
 " Last Change:  2022-10-29 12:11:06.0 +0200
 " License:      GPLv3
-" Notes: 🎨 Colours for this theme     
+" Notes: 🎨 Colours for this theme
 "      --------------------------------------------------------------
 "      #ffaff9 light pink           |   #6DF2E5 cyan
 "      #f289f9 neon magenta         |   #2ac3de dark cyan
@@ -128,57 +128,6 @@ highlight Todo       guifg=#fdcd36 guibg=#2569aa
 highlight NonText    guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 
-" ------------------------------ Python Colors -------------------------------
-if !has('nvim')
-    " we have a custom syntax file for vim. in neovim, we rely on treesitter
-    highlight pythonDottedName      guifg=#5cc9fd
-    highlight pythonDot             guifg=#6DF2E5
-
-    highlight pythonBuiltinObject   guifg=#ffaff9
-
-    highlight pythonLambdaExpr      guifg=#8787ff
-
-    " conditional operators like "==" or "!=" or "is" or "not"
-    highlight pythonExtraOperator   guifg=#fdcd36
-
-    " things like @option('--overwrite', '-O', is_flag=True)
-    highlight pythonDecorator guifg=#f7fb53
-
-    " python strings
-    highlight pythonStrFormat     cterm=bold guifg=#6DF2E5
-    highlight pythonStrFormatting cterm=bold guifg=#6DF2E5
-
-
-    highlight pythonBrackets      ctermfg=183 guifg=#2ac3de
-    highlight default link pythonKeywordOperator pythonExtraOperator
-    highlight default link pythonDelimiter Delimeter
-    highlight link pythonBoolean Boolean
-    " --------------------------------- TOML -----------------
-    highlight default link tomlTable Function
-    " highlight default link tomlTableArray Function
-    highlight tomlDotInKey guifg=#5fafff
-    highlight tomlBracket  guifg=#f289f9
-    highlight tomlCurly    guifg=#5fafff
-    highlight tomlComma    guifg=#f289f9
-    highlight tomlOperator guifg=#f7fb53
-
-    " ------------------------------ HTML Colors --------------
-    highlight link htmlTag     Type
-    highlight link htmlEndTag  htmlTag
-    highlight link htmlTagName htmlTag
-    highlight htmlH1 guifg=#f289f9
-    highlight htmlH2 guifg=#ffaff9
-
-    " ----------------------------- Markdown colors ---------
-    highlight markdownCode guifg=#a8fd57 guibg=#232336
-    highlight link markdownCodeBlock markdownCode
-endif
-
-
-
-" ------------------------------- Sass colors --------------------------------
-highlight link sassMixin Keyword
-highlight link sassMixing Constant
 
 " ------------------------------- Git Commit ---------------------------------
 "
@@ -190,6 +139,7 @@ highlight gitcommitWarning       guifg=#f2748a
 highlight gitcommitBranch        guifg=#f7fb53
 highlight gitcommitHeader        guifg=#5cc9fd
 
+" for nvim specific plugins, does not work with vim
 if has('nvim')
     " change sign column color for git to be the same as line number background
     highlight SignColumn guibg=#232336
@@ -241,53 +191,89 @@ if has('nvim')
 
     highlight ScrollbarInfo guifg=#5cc9fd
 
-    " --------------------------- barbar: tab bar ----------------------------
-    let s:bg_current = '#232336'
-    let s:bg_visible = '#232336'
-    let s:bg_other   = '#000000'
-    let s:bg_alt     = '#3E3E3E'
-    let s:blue       = '#5cc9fd'
-    let s:red        = '#f2748a'
-    let s:yellow     = '#f9f986'
+    " ------------------------ barbar: tab bar ----------------------------
+    "   #232336 blueish black        |   #585858 gray
+    "   #1d2652 navy blue            |   #3E3E3E darker gray
+    "   #2569aa darker blue          |   #323232 grayish black
+    "   #3d59a1 dark bluish gray     |   #414868 - not in use
+    "   #565f89 not in use
+    highlight BufferCurrent        guifg=#5cc9fd     guibg=#565f89
+    highlight BufferCurrentIndex   guifg=fg_special  guibg=#565f89
+    highlight BufferCurrentMod     guifg=fg_modified guibg=#565f89
+    highlight BufferCurrentSign    guifg=fg_special  guibg=#565f89
+    highlight BufferCurrentTarget  guifg=fg_target   guibg=#565f89 gui=bold
 
-    " these are all grays
-    let s:base4       = '#323232'
-    let s:base6       = '#3E3E3E'
-    let s:base7       = '#585858'
-    let s:base9       = '#bdd8ff'
+    highlight BufferVisible        guifg=fg_visible  guibg=#414868
+    highlight BufferVisibleIndex   guifg=fg_visible  guibg=#414868
+    highlight BufferVisibleMod     guifg=fg_modified guibg=#414868
+    highlight BufferVisibleSign    guifg=fg_visible  guibg=#414868
+    highlight BufferVisibleTarget  guifg=fg_target   guibg=#414868 gui=bold
 
-    highlight TabLine             guifg=s:base9 guibg=s:bg_alt
-    highlight TabLineSel          guifg=s:blue  guibg=s:bg_current gui=bold
-    highlight TabLineFill         guifg=s:none  guibg=s:bg_other   gui=bold
+    highlight BufferInactive       guifg=fg_inactive guibg=#3E3E3E
+    highlight BufferInactiveIndex  guifg=fg_subtle   guibg=#3E3E3E
+    highlight BufferInactiveMod    guifg=fg_modified guibg=#3E3E3E
+    highlight BufferInactiveSign   guifg=fg_subtle   guibg=#3E3E3E
+    highlight BufferInactiveTarget guifg=fg_target   guibg=#3E3E3E gui=bold
 
-    highlight BufferCurrent       guifg=s:base9     guibg=s:bg_current  
-    highlight BufferCurrentIndex  guifg=s:base6     guibg=s:bg_current  
-    highlight BufferCurrentMod    guifg=s:yellow    guibg=s:bg_current  
-    highlight BufferCurrentSign   guifg=s:blue      guibg=s:bg_current  
-    highlight BufferCurrentTarget guifg=s:red       guibg=s:bg_current  gui=bold
+    highlight BufferTabpages       guifg=fg_special  guibg=#3E3E3E gui=bold
+    highlight BufferTabpageFill    guifg=fg_inactive guibg=#3E3E3E
 
-    highlight BufferVisible       guifg=s:base7     guibg=s:bg_visible  
-    highlight BufferVisibleIndex  guifg=s:base9     guibg=s:bg_visible  
-    highlight BufferVisibleMod    guifg=s:yellow    guibg=s:bg_visible  
-    highlight BufferVisibleSign   guifg=s:base4     guibg=s:bg_visible  
-    highlight BufferVisibleTarget guifg=s:red       guibg=s:bg_visible  gui=bold
+    highlight link BufferCurrentIcon  BufferCurrent
+    highlight link BufferVisibleIcon  BufferVisible
+    highlight link BufferInactiveIcon BufferInactive
+    highlight link BufferOffset       BufferTabpageFill
 
-    highlight BufferInactive       guifg=s:base6     guibg=s:bg_other    
-    highlight BufferInactiveIndex  guifg=s:base6     guibg=s:bg_other    
-    highlight BufferInactiveMod    guifg=s:yellow    guibg=s:bg_other    
-    highlight BufferInactiveSign   guifg=s:base4     guibg=s:bg_other    
-    highlight BufferInactiveTarget guifg=s:red       guibg=s:bg_other    gui=bold
+" for vim specific plugins only, doesn't really work with nvim so well
+else
+    " ------------------------------ Python Colors -------------------------------
+    " we have a custom syntax file for vim. in neovim, we rely on treesitter
+    highlight pythonDottedName      guifg=#5cc9fd
+    highlight pythonDot             guifg=#6DF2E5
 
-    highlight BufferTabpages       guifg=s:blue      guibg=s:bg_current  gui=bold
-    highlight BufferTabpageFill    guifg=s:base4     guibg=s:bg_other    gui=bold
-    highlight BufferOffset         guifg=s:base6     guibg=s:bg_current  gui=bold
+    highlight pythonBuiltinObject   guifg=#ffaff9
 
-    highlight BufferPart   guibg=s:blue   guibg=s:base9 gui=bold
-    " let s:diff_info_bg0 = color#Mix('#D8EEFD', s:bg, 0.6) 
-endif
+    highlight pythonLambdaExpr      guifg=#8787ff
+
+    " conditional operators like "==" or "!=" or "is" or "not"
+    highlight pythonExtraOperator   guifg=#fdcd36
+
+    " things like @option('--overwrite', '-O', is_flag=True)
+    highlight pythonDecorator guifg=#f7fb53
+
+    " python strings
+    highlight pythonStrFormat     cterm=bold guifg=#6DF2E5
+    highlight pythonStrFormatting cterm=bold guifg=#6DF2E5
 
 
-if !has('nvim')
+    highlight pythonBrackets      ctermfg=183 guifg=#2ac3de
+    highlight default link pythonKeywordOperator pythonExtraOperator
+    highlight default link pythonDelimiter Delimeter
+    highlight link pythonBoolean Boolean
+
+    " --------------------------------- TOML -----------------
+    highlight default link tomlTable Function
+    " highlight default link tomlTableArray Function
+    highlight tomlDotInKey guifg=#5fafff
+    highlight tomlBracket  guifg=#f289f9
+    highlight tomlCurly    guifg=#5fafff
+    highlight tomlComma    guifg=#f289f9
+    highlight tomlOperator guifg=#f7fb53
+
+    " ------------------------------ HTML Colors --------------
+    highlight link htmlTag     Type
+    highlight link htmlEndTag  htmlTag
+    highlight link htmlTagName htmlTag
+    highlight htmlH1 guifg=#f289f9
+    highlight htmlH2 guifg=#ffaff9
+
+    " ----------------------------- Markdown colors ---------
+    highlight markdownCode guifg=#a8fd57 guibg=#232336
+    highlight link markdownCodeBlock markdownCode
+
+    " ------------------------------- Sass colors --------------------------------
+    highlight link sassMixin Keyword
+    highlight link sassMixing Constant
+
     " -------------------------------- Gitgutter ---------------------------------
     " change sign column color for git to be the same as line number background
     highlight! link SignColumn LineNr
