@@ -240,6 +240,21 @@ if has('nvim')
     highlight link ScrollbarWarn WarningMsg
 
     highlight ScrollbarInfo guifg=#5cc9fd
+
+    " --------------------------- barbar: tab bar ----------------------------
+    let fg_target = 'blue'
+
+    let fg_current  = s:fg(['Normal'], '#efefef')
+    let fg_visible  = s:fg(['TabLineSel'], '#efefef')
+    let fg_inactive = s:fg(['TabLineFill'], '#888888')
+
+    let fg_modified  = s:fg(['WarningMsg'], '#E5AB0E')
+    let fg_special  = s:fg(['Special'], '#599eff')
+    let fg_subtle  = s:fg(['NonText', 'Comment'], '#555555')
+
+    let bg_current  = s:bg(['Normal'], '#000000')
+    let bg_visible  = s:bg(['TabLineSel', 'Normal'], '#000000')
+    let bg_inactive = s:bg(['TabLineFill', 'StatusLine'], '#000000')
 endif
 
 
@@ -292,48 +307,3 @@ if !has('nvim')
     highlight NERDTreeGitStatusDeleted   guifg=#f289f9
     highlight NERDTreeGitStatusUntracked guifg=#f289f9
 endif
-
-
-
-" TelescopeResultsFileIcon link Normal
-" TelescopeResultsDiffChange link DiffChange
-" TelescopeResultsDiffAdd link DiffAdd
-" TelescopeResultsDiffDelete link DiffDelete
-" TelescopeResultsDiffUntracked link NonText
-" TelescopePromptTitle link TelescopeTitle
-"TelescopePreviewBorder link TelescopeBorder
-" TelescopeSelection link Visual
-" TelescopeSelectionCaret link TelescopeSelection
-" TelescopeMultiSelection link Type
-" TelescopeMultiIcon link Identifier
-" TelescopeNormal link Normal
-" TelescopePreviewNormal link TelescopeNormal
-" TelescopePromptNormal link TelescopeNormal
-" TelescopeResultsNormal link TelescopeNormal
-" TelescopePromptBorder link TelescopeBorder
-" TelescopeResultsBorder link TelescopeBorder
-" TelescopeResultsTitle link TelescopeTitle
-" TelescopePreviewTitle link TelescopeTitle
-" TelescopePromptCounter link NonText
-" TelescopeMatching link Special
-" TelescopePromptPrefix link Identifier
-" TelescopePreviewLine link Visual
-" TelescopePreviewMatch link Search
-" TelescopePreviewPipe link Constant
-" TelescopePreviewCharDev link Constant
-" TelescopePreviewDirectory link Directory
-" TelescopePreviewBlock link Constant
-" TelescopePreviewLink link Special
-" TelescopePreviewSocket link Statement
-" TelescopePreviewRead link Constant
-" TelescopePreviewWrite link Statement
-" TelescopePreviewExecute link String
-" TelescopePreviewHyphen link NonText
-" TelescopePreviewSticky link Keyword
-" TelescopePreviewSize link String
-" TelescopePreviewUser link Constant
-" TelescopePreviewGroup link Constant
-" TelescopePreviewDate link Directory
-" TelescopePreviewMessage link TelescopePreviewNormal
-" TelescopePreviewMessageFillchar link TelescopePreviewMessage
-" TelescopeResultsClass link Function
