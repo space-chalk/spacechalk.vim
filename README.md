@@ -17,7 +17,7 @@ Supported only when someone raises an issue:
 
 ## Installation
 
-You should be able to install this fine with any vim/neovim plugin manager. (If you can't, let me know via an Issue or PR)
+You should be able to install this fine with any vim plugin manager. (If you can't, let me know via an Issue or PR)
 
 ### vim-plug
 
