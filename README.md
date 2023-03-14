@@ -1,19 +1,13 @@
-# 🛸 Space Chalk Theme for [Neo]Vim 🎨
+# 🛸 Space Chalk Theme for Vim 🎨
 A theme trying to combine a love of neon space colors and pastel chalk board colors.
 
 <img src="./img/vim_example.png" style="width=800" alt="Screenshot of vim editing a python file with the nerdtree file browser plugin. It's showing off the Space Chalk Color Theme, featuring syntax highlight colors somewhere between pastel and neon on a very dark bluish purple background">
 
+Looking for this colorscheme for _neo_vim? Check out [spacechalk.nvim](https://github.com/space-chalk/spacechalk.nvim)! :)
+
 ## Supported features
 The author of this plugin actively uses neovim, but used to use vim exclusively.
 
-### neovim
-- [barbecue](https://github.com/utilyre/barbecue.nvim)
-- [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
-- [scrollbar.nvim](https://github.com/petertriho/nvim-scrollbar)
-- [Telescope](https://github.com/nvim-telescope/telescope.nvim) - currently working on this
-- [barbar](https://github.com/romgrk/barbar.nvim)
-
-### vim
 Supported only when someone raises an issue:
 - [gitgutter]
 - [NERDTree]
@@ -29,12 +23,6 @@ You should be able to install this fine with any vim/neovim plugin manager. (If 
 
 ```vim
 Plug 'space-chalk/spacechalk.vim'
-```
-
-### packer
-
-```lua
-use {'space-chalk/spacechalk.vim'}
 ```
 
 ### manual
@@ -58,17 +46,9 @@ colorscheme spacechalk
 This theme assumes gui colors. Add this to your `.vimrc` to enable true colors:
 
 ```vim
-if has('nvim') || has('termguicolors')
+if has('termguicolors')
   set termguicolors
 endif
-```
-
-#### neovim (in lua)
-You can of course use vimscript instead of lua, but for those new to neovim, this is what you want to do:
-
-```lua
--- you will want this after packer has been loaded
-vim.cmd.colorscheme("spacechalk")
 ```
 
 ### Airline
